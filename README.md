@@ -19,7 +19,7 @@
     I have therefore decided to maintain by own repository of code snippets to help me remember how to do things. I hope you find it useful too.
     
   </p>
-<p>
+<p align="center">
 I develop Warehouse Management Systems, so my main knowledge is backend database, C# code, but my UI skills are not great. I am learning MAUI as I go along, so please be patient with me.
 </p>
 </div>
