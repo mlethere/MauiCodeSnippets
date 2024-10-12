@@ -27,6 +27,11 @@ namespace MauiCodeSnippets
         {
             Navigation.PushAsync(new CoolButtonPage());
         }
+
+        private void btnNavigationMenuClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NavigationMenuPage());
+        }
     }
 
 }

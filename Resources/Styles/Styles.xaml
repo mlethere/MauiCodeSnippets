@@ -13,6 +13,47 @@
         <Setter Property="BorderWidth" Value="1" />
     </Style>
 
+
+    <Style TargetType="Button" x:Key="stimpMenuButton">
+        <Setter Property="FontSize" Value="28"/>
+        <Setter Property="Background" Value="{StaticResource White}"/>
+        <Setter Property="TextColor" Value="{StaticResource Black}" />
+        <Setter Property="BorderColor" Value="{StaticResource Gray300}" />
+        <Setter Property="BorderWidth" Value="1" />
+    </Style>
+
+    <Style TargetType="Grid" x:Key="stimpNavigationGrid">
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="Padding" Value="10" />
+    </Style>
+
+    <Style TargetType="Image" x:Key="stimpNavigationIcon">
+        <Setter Property="HorizontalOptions" Value="Start" />
+        <Setter Property="WidthRequest" Value="24" />
+        <Setter Property="HeightRequest" Value="24" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="stimpNavigationLabel">
+        <Setter Property="Padding" Value="96,0,0,0" />
+        <Setter Property="FontSize" Value="32" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="stimpNavigationLabelRightArrow">
+        <Setter Property="HorizontalOptions" Value="End" />
+        <Setter Property="FontSize" Value="32" />
+        <Setter Property="VerticalOptions" Value="Center" />
+
+    </Style>
+
+    <Style TargetType="Image" x:Key="stimpNavigationIconRightArrow">
+        <Setter Property="HorizontalOptions" Value="End" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="WidthRequest" Value="24" />
+        <Setter Property="HeightRequest" Value="24" />
+    </Style>
+
     <!-- Defaults -->
     
     <Style TargetType="ActivityIndicator">

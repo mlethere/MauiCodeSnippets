@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCodeSnippets.Views.NavigationMenuPage"
+             Title="NavigationMenuPage"
+              BackgroundColor="LightGray">
+    
+    
+    <VerticalStackLayout>
+        <Label 
+            Text="Navigation Menu Page"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label
+            Text="CONTENT"
+            />
+
+
+        <Grid RowDefinitions="75, 75, 75" Style="{StaticResource stimpNavigationGrid}">
+            
+            <Grid Grid.Row="0">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnGridRowTapped" />
+                </Grid.GestureRecognizers>
+                <Image Source="cog24.png" Style="{StaticResource stimpNavigationIcon}" />
+                <Label Text="Settings" Style="{StaticResource stimpNavigationLabel}" />
+                <Image Source="angleright.png" Style="{StaticResource stimpNavigationIconRightArrow}"/>
+            </Grid>
+            
+
+            <Grid  Grid.Row="1">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnGridRowTapped" />
+                </Grid.GestureRecognizers>
+                <!-- Content of the second row -->
+                <Image Source="usb24.png" Style="{StaticResource stimpNavigationIcon}" />
+                <Label Text="Get Connected" Style="{StaticResource stimpNavigationLabel}" />
+                <Image Source="angleright.png" Style="{StaticResource stimpNavigationIconRightArrow}"/>
+            </Grid>
+
+            <Grid  Grid.Row="2">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnGridRowTapped" />
+                </Grid.GestureRecognizers>
+                <!-- Content of the second row -->
+                <Image Source="radiation24.png" Style="{StaticResource stimpNavigationIcon}" />
+                <Label Text="Posts" Style="{StaticResource stimpNavigationLabel}" />
+                <Image Source="angleright.png" Style="{StaticResource stimpNavigationIconRightArrow}"/>
+            </Grid>
+
+            <!--This draws a black line underneath first row-->
+            <BoxView Grid.Row="0" HeightRequest="1" BackgroundColor="Black" VerticalOptions="End" Margin="100,0,0,0"/>
+            <BoxView Grid.Row="1" HeightRequest="1" BackgroundColor="Black" VerticalOptions="End" Margin="100,0,0,0"/>
+
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>

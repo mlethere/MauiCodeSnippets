@@ -36,6 +36,14 @@
                  Text="White Button with Rounded Corners"
                  Clicked="btnCoolButton_Clicked"
                  HorizontalOptions="Fill" />
+
+            <Button
+             x:Name="btnNavigationMenuButton"
+             Text="Navigation Menu Emulated"
+             Clicked="btnNavigationMenuClicked"
+             HorizontalOptions="Fill" />
+            
+            
         </VerticalStackLayout>
     </ScrollView>
 
