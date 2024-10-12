@@ -1,4 +1,6 @@
-﻿namespace MauiCodeSnippets
+﻿using MauiCodeSnippets.Views;
+
+namespace MauiCodeSnippets
 {
     public partial class MainPage : ContentPage
     {
@@ -19,6 +21,11 @@
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+        }
+
+        private void btnCoolButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CoolButtonPage());
         }
     }
 

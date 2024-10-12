@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCodeSnippets.Views.CoolButtonPage"
+             Title="CoolButtonPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="These buttons can be adapted on forms"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button 
+            Text="New Styled Button" 
+            Style="{StaticResource coolButton}" 
+            Margin="10,10,10,10" 
+            Clicked="Button_Clicked"/>
+
+
+    </VerticalStackLayout>
+</ContentPage>
