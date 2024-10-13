@@ -4,34 +4,28 @@ namespace MauiCodeSnippets
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
-        }
-
-        private void btnCoolButton_Clicked(object sender, EventArgs e)
+        private void OnCoolButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new CoolButtonPage());
         }
 
-        private void btnNavigationMenuClicked(object sender, EventArgs e)
+        private void OnNavigationMenuClicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new NavigationMenuPage());
         }
+
+        private void OnSimpleMvvm_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SimpleVVMwithTimerPage());
+        }
+
+        // Commanding is next (https://learn.microsoft.com/en-us/dotnet/maui/xaml/fundamentals/mvvm?view=net-maui-8.0#commanding)
     }
 
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCodeSnippets.Views.SimpleVVMwithTimerPage"
+             xmlns:viewModel="clr-namespace:MauiCodeSnippets.ViewModels"
+             Title="Simple View - ViewModel with a Timer">
+
+    <ContentPage.BindingContext>
+        <viewModel:SimpleVVMwithTimerViewModel />
+    </ContentPage.BindingContext>
+    
+    
+    <VerticalStackLayout>
+        <Label 
+            Text="Simple View-View Model example ... there is no model involved here"
+            Style="{StaticResource Headline}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+            
+        <Label 
+           Text="I have used a ViewModel, and added a timer that refreshes the time every second."
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+        <Label Text="The current time below is:" />
+        <Label Text="{Binding CurrentDateTime, StringFormat='{0:T}'}"
+           FontSize="18"
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+
+        <Label Text="It has been running this # of seconds" />
+        <Label Text="{Binding Duration, StringFormat='{0:N0}'}"
+                FontSize="18"
+ HorizontalOptions="Center"
+ VerticalOptions="Center" />
+
+
+    </VerticalStackLayout>
+</ContentPage>
