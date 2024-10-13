@@ -19,7 +19,7 @@
                 SemanticProperties.HeadingLevel="Level1" />
 
             <Label
-                Text="Welcome to Mark's Useless Set of Code Snippets to .Net MAUI"
+                Text="Welcome to Mark's Handy Dandy Set of Code Snippets to .Net MAUI"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
