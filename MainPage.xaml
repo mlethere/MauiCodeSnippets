@@ -37,12 +37,18 @@
                 HorizontalOptions="Fill" />
 
             <Button
-             x:Name="btnNavigationMenuButton"
-             Text="Navigation Menu Emulated"
-             Clicked="OnNavigationMenuClicked"
-             HorizontalOptions="Fill" />
-            
-            
+                 x:Name="btnNavigationMenuButton"
+                 Text="Navigation Menu Emulated"
+                 Clicked="OnNavigationMenuClicked"
+                 HorizontalOptions="Fill" />
+
+            <Button
+                  x:Name="btnMvvmCommands"
+                  Text="View-ViewModel Binding to Commands Domonstration"
+                  Clicked="OnNumberPaidClicked"
+                  HorizontalOptions="Fill" />
+
+
         </VerticalStackLayout>
     </ScrollView>
 

@@ -25,6 +25,11 @@ namespace MauiCodeSnippets
             Navigation.PushAsync(new SimpleVVMwithTimerPage());
         }
 
+        private void OnNumberPaidClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NumberPadDataEntryPage());
+        }
+
         // Commanding is next (https://learn.microsoft.com/en-us/dotnet/maui/xaml/fundamentals/mvvm?view=net-maui-8.0#commanding)
     }
 

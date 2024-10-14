@@ -75,6 +75,9 @@
 	  <MauiXaml Update="Views\NavigationMenuPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\NumberPadDataEntryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\SimpleVVMwithTimerPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
