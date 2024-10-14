@@ -4,6 +4,7 @@
 *** Go create something AMAZING! :D
 *** Never Stop Learning
 *** Be independent and build your own things (until you know how, then get someone else to do it)
+*** https://devblogs.microsoft.com/xamarin/snppts-ui-snippets-xamarin-forms/
 -->
 
 # Mark Letheren .Net Maui Code Snippets Repository
