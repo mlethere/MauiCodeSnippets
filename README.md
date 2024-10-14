@@ -29,7 +29,7 @@ I am going to create a list of code snippets / examples, based on Microsoft's do
 
 
 ## Who am I, Mark Letheren
-I am the Vice President of Information Technology & Innovation for Positive Fulfillment Services Ltd. Even though I may not be coding all the time any longer, innovations not only come from observing systems and behaviours, it also does come from software R&D. Obviously talking and learning are enormously important too.
+I am the Vice President of Information Technology & Innovation for Positive Fulfillment Services Ltd. Even though I may not be coding all the time any longer, innovations not only come from observing systems and human behaviours, it also does come from software R&D. Obviously talking and learning are enormously important too.
 
 My strengths are order entry, warehouse management, transport management systems, but anything to do with Warehouse Management, Fulfillment Systems, I have worked on since 1986. 
 
