@@ -51,7 +51,9 @@
         <Button Text="#" Command="{Binding AddCharCommand}" CommandParameter="#" Grid.Row="4" Grid.Column="2" />
         
        <!-- ML 14/10/2024 :- Adding a clear button -->
-        <Button Text="C" Command="{Binding ClearNumberCommand}" CommandParameter="C" Grid.Row="5" Grid.Column="0" />
+        <Button Text="C" Command="{Binding ClearNumberCommand}" Grid.Row="5" Grid.Column="0" />
+        <Button ImageSource="phoneicon24.png" Command="{Binding DialNumberCommand}" Grid.Row="5" Grid.Column="2" />
+
     </Grid>
 
 

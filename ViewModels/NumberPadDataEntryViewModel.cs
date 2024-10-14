@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Data.Common;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
@@ -31,6 +32,29 @@ namespace MauiCodeSnippets.ViewModels
                     () => ClearStringByMark(),
                     () => InputString.Length > 0
                     );
+
+            DialNumberCommand = new Command(
+                () => DialNumberByMark(),
+                () => CanDialNumberByMark()
+                );
+        }
+
+        private bool CanDialNumberByMark()
+        {
+            // Changed it up - dial number if we only have numbers and it is equal to 10 characters
+            bool result = 
+                _inputString.IndexOfAny(_specialChars) == -1 &&
+                _inputString.Length >= 10;
+
+            return result ;
+        }
+
+        private void DialNumberByMark()
+        {
+            // From this class, we cannot display an alert as we are not inherited from a ContentPage
+            // TODO: We will come back to this
+            // Create a new page and Pop is pretending to dial a number .....
+
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -42,6 +66,11 @@ namespace MauiCodeSnippets.ViewModels
         /// </summary>
         public ICommand ClearNumberCommand { get; private set; }
         public ICommand DeleteCharCommand { get; private set; }
+
+        /// <summary>
+        /// I added this number so that I could extend the functionality
+        /// </summary>
+        public ICommand DialNumberCommand { get; private set; }
 
         public string DisplayText
         {
@@ -75,7 +104,9 @@ namespace MauiCodeSnippets.ViewModels
                     // If I disable this line, the Delete button never gets enabled.
                     ((Command)DeleteCharCommand).ChangeCanExecute();
 
+                    // ml / 14/10/2024: Added these two lines
                     ((Command)ClearNumberCommand).ChangeCanExecute();
+                    ((Command)DialNumberCommand).ChangeCanExecute();
                 }
             }
         }

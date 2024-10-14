@@ -2,33 +2,37 @@
 <a id="readme-top"></a>
 <!--
 *** Go create something AMAZING! :D
+*** Never Stop Learning
+*** Be independent and build your own things (until you know how, then get someone else to do it)
 -->
 
+# Mark Letheren .Net Maui Code Snippets Repository
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://golfscorecards.app/">
-    Golf Apps
-  </a>
+I have been having a bit of a mental challenge migrating from XAML to .Net MAUI. Everytime I try do something I get stumped, and that is typically
+caused by not having a very good foundation.
 
-<h3 align="center">.Net Maui Code Snippets</h3>
+I am going to create a list of code snippets / examples, based on Microsoft's documentaiton and then expanded upon.
 
-  <p align="center">
-    I have been having a problem with MAUI. It seems simple enough, but as soon as I want to do something outside of a "101 Coding", I get totally stumped.
-    I have therefore decided to maintain by own repository of code snippets to help me remember how to do things. I hope you find it useful too.
-  </p>
-<p align="center">
-    I develop Warehouse Management Systems, so my main knowledge is backend database, C# code, but my UI skills are not great. I am learning MAUI as I go along, so please be patient with me.
-</p>
-</div>
 
-<p align="center">
-<a href="https://uxwing.com/">Icons by UXWing</a>
-</p>
+## Online Resources by Mark Letheren
+[Golf Scorecard Apps](https://golfscorecards.app/)
+  
+[Yoga by Mark](https://www.yogabymark.com/)
 
-<p align="center">
-<a href="https://www.positivecan.com/">Leading Canadian Small Package Fulfillment</a>
-</p>
+[Positive Fulfillment Services Ltd](https://www.positivecan.com/)
+
+[Pharmilink Healthcare Marketing Services Ltd](https://www.pharmilink.com/)
+
+[Gates and Boards](https://www.gatesandboards.com "Independent ski and snowboard shop, located in Barrie, Ontario")
+
+[Icons by UXWing](https://uxwing.com/ "Handy resource for Icons")
+
+
+## Who am I, Mark Letheren
+I am the Vice President of Information Technology & Innovation for Positive Fulfillment Services Ltd. Even though I may not be coding all the time any longer, innovations not only come from observing systems and behaviours, it also does come from software R&D. Obviously talking and learning are enormously important too.
+
+My strengths are order entry, warehouse management, transport management systems, but anything to do with Warehouse Management, Fulfillment Systems, I have worked on since 1986. 
+
+
 
 
