@@ -16,6 +16,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         
         <Grid.ColumnDefinitions>
@@ -48,6 +49,9 @@
         <Button Text="*" Command="{Binding AddCharCommand}" CommandParameter="*" Grid.Row="4" />
         <Button Text="0" Command="{Binding AddCharCommand}" CommandParameter="0" Grid.Row="4" Grid.Column="1" />
         <Button Text="#" Command="{Binding AddCharCommand}" CommandParameter="#" Grid.Row="4" Grid.Column="2" />
+        
+       <!-- ML 14/10/2024 :- Adding a clear button -->
+        <Button Text="C" Command="{Binding ClearNumberCommand}" CommandParameter="C" Grid.Row="5" Grid.Column="0" />
     </Grid>
 
 
