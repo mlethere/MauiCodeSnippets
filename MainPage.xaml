@@ -48,6 +48,12 @@
                   Clicked="OnNumberPaidClicked"
                   HorizontalOptions="Fill" />
 
+            <Button
+                x:Name="btnMvvmBirthdays"
+                Text="Full MVVM Example with Saving Data to a Text File Databases"
+                Clicked="OnBirthdaysClicked"
+                HorizontalOptions="Fill" />
+
 
         </VerticalStackLayout>
     </ScrollView>

@@ -9,7 +9,6 @@ namespace MauiCodeSnippets
             InitializeComponent();
         }
 
-
         private void OnCoolButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new CoolButtonPage());
@@ -20,17 +19,22 @@ namespace MauiCodeSnippets
             Navigation.PushAsync(new NavigationMenuPage());
         }
 
-        private void OnSimpleMvvm_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new SimpleVVMwithTimerPage());
-        }
-
         private void OnNumberPaidClicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new NumberPadDataEntryPage());
         }
 
-        // Next : Create a Dial a Number Pop Up Page
-    }
+        private void OnSimpleMvvm_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SimpleVVMwithTimerPage());
+        }
 
+        private void OnBirthdaysClicked(object sender, EventArgs e)
+        {
+            // Next : https://learn.microsoft.com/en-us/training/modules/design-mvvm-viewmodel/2-what-is-mvvm
+            Navigation.PushAsync(new BirthdayPage());
+        }
+
+
+    }
 }
