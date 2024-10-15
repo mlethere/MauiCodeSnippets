@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCodeSnippets.Views.NumberDialPadCallPage"
+             xmlns:vm="clr-namespace:MauiCodeSnippets.ViewModels"
+             Title="Demonstrate a value being passed from one view model to another">
+
+    <ContentPage.BindingContext>
+        <vm:NumberPadDataEntryViewModel />
+    </ContentPage.BindingContext>
+    
+    
+    <VerticalStackLayout>
+        <Label 
+            Text="Dialing Number ....."
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label Text="{Binding DisplayText}"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               FontSize="Large"
+               HeightRequest="100"
+               />
+
+    </VerticalStackLayout>
+</ContentPage>

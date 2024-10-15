@@ -9,7 +9,7 @@ public partial class NavigationMenuPage : ContentPage
 
     // ********************************************************************************
     /// <summary>
-    /// OnTapEvent from the grid displayed in NavigrationMenuPage.xaml
+    /// OnTapEvent from the grid displayed in NavigationMenuPage.xaml
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
@@ -32,7 +32,7 @@ public partial class NavigationMenuPage : ContentPage
         int column = Grid.GetColumn(tappedElement);
 
         // Display an alert and wait for the user to acknowledge it
-        // This only works because we are in the XAML Page CS .. doesn't work in a class such as a viewmodel
+        // This only works because we are in the XAML Page CS .. doesn't work in a class such as a viewModel
         await DisplayAlert("Grid Tapped", $"You taped an element in the grid. It was row # {row} and column # {column}!", "OK");
 
         // Revert the background color of the tapped element to its original color

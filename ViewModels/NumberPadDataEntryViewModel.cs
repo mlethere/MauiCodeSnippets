@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using MauiCodeSnippets.Views;
+using System.ComponentModel;
 using System.Data.Common;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
@@ -55,6 +56,16 @@ namespace MauiCodeSnippets.ViewModels
             // TODO: We will come back to this
             // Create a new page and Pop is pretending to dial a number .....
 
+            ContentPage newPage = new NumberDialPadCallPage(_inputString);
+            // Use the Navigation property to push the new page onto the navigation stack
+            Application.Current.MainPage.Navigation.PushAsync(newPage);
+
+        }
+
+        public void SetNumberToDial(string numberToDial)
+        {
+            /// Not sure that this is the best way to do this ..... when I cover passing view models I may come back to this.
+            InputString = numberToDial;
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -62,7 +73,7 @@ namespace MauiCodeSnippets.ViewModels
         public ICommand AddCharCommand { get; private set; }
 
         /// <summary>
-        /// I addd this command, so that I extend this functionality
+        /// I added this command, so that I extend this functionality
         /// </summary>
         public ICommand ClearNumberCommand { get; private set; }
         public ICommand DeleteCharCommand { get; private set; }
