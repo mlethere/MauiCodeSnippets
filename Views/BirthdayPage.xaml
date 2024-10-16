@@ -3,20 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiCodeSnippets.Views.BirthdayPage"
              xmlns:vm="clr-namespace:MauiCodeSnippets.ViewModels"
-             Title="BirthdayPage">
+             Title="BirthdayPage"
+             >
 
+    <!--The Movie Database example has the list of movies as a property in the MainAPp ... did not know you could do this 
+        but I don't want that. I would like to have this list page oad the movies We have a binding here to BirthdayList this needs to be inititialized -->
     <ContentPage.BindingContext>
-        <vm:BirthdayViewModel />
+        <vm:BirthdayListViewModel />
     </ContentPage.BindingContext>
 
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-
-        <Label Text="{Binding Name}" />
-
-        <Label Text="{Binding BirthDate}" />
-    </VerticalStackLayout>
+    <ListView ItemsSource="{Binding BirthdayList}" Margin="10">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}" x:DataType="vm:BirthdayViewModel">
+                    
+                </TextCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>

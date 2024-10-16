@@ -1,46 +1,34 @@
-﻿using MauiCodeSnippets.Models;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MauiCodeSnippets.ViewModels
 {
-    public class BirthdayViewModel : INotifyPropertyChanged
+    public class BirthdayViewModel : ObservableObject
     {
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        private BirthdayModel _model = new BirthdayModel();
+        private string _name = string.Empty;
+        private DateTime _birthDate = DateTime.Now;
 
         public string Name
         {
-            get => _model.Name;
-            set
-            {
-                if (_model.Name != value)
-                {
-                    _model.Name = value;
-                    OnPropertyChanged(nameof(Name));
-                }
-            }
+            get => _name;
+            set => SetProperty(ref _name, value);
         }
 
         public DateTime BirthDate
         {
-            get => _model.BirthDate;
-            set
-            {
-                if (_model.BirthDate != value)
-                {
-                    _model.BirthDate = value;
-                    OnPropertyChanged(nameof(BirthDate));
-                }
-            }
+            get => _birthDate;
+            set => SetProperty(ref _birthDate, value);
         }
 
-        protected void OnPropertyChanged(string propertyName) =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        public BirthdayViewModel(Models.BirthdayModel birthdayRecord)
+        {
+            _name = birthdayRecord.Name;
+            _birthDate = birthdayRecord.BirthDate;
+        }
+
     }
 }
