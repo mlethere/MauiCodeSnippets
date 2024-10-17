@@ -11,17 +11,21 @@
     <!--<ContentPage.BindingContext>
         <vm:BirthdayListViewModel />
     </ContentPage.BindingContext>-->
-
-    <ListView ItemsSource="{Binding BirthdayList}" Margin="10">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Name}" x:DataType="vm:BirthdayViewModel">
-                    <TextCell.ContextActions>
-                        <MenuItem Text="Edit" Clicked="OnEditClicked" />
-                        <MenuItem Text="Delete" Clicked="OnDeleteClicked" />
-                    </TextCell.ContextActions>
-                </TextCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    
+    <!--Stack Layout allows me to add different elements -->
+    <StackLayout>
+        <Label Text="Mark" />
+        <ListView ItemsSource="{Binding BirthdayList}" Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" x:DataType="vm:BirthdayViewModel">
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Edit" Clicked="OnEditClicked" />
+                            <MenuItem Text="Delete" Clicked="OnDeleteClicked" />
+                        </TextCell.ContextActions>
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
