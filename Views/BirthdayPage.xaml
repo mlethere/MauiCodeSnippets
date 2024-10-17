@@ -6,17 +6,20 @@
              Title="BirthdayPage"
              >
 
-    <!--The Movie Database example has the list of movies as a property in the MainAPp ... did not know you could do this 
-        but I don't want that. I would like to have this list page oad the movies We have a binding here to BirthdayList this needs to be inititialized -->
-    <ContentPage.BindingContext>
+    <!--The Movie Database example from Microsoft has the list of movies as a property in the MainAPp ... did not know you could do this 
+        but I don't want that. I am therefore loading it in the code as it wouldn't work here, and I could a compiler error -->
+    <!--<ContentPage.BindingContext>
         <vm:BirthdayListViewModel />
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
 
     <ListView ItemsSource="{Binding BirthdayList}" Margin="10">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding Name}" x:DataType="vm:BirthdayViewModel">
-                    
+                    <TextCell.ContextActions>
+                        <MenuItem Text="Edit" Clicked="OnEditClicked" />
+                        <MenuItem Text="Delete" Clicked="OnDeleteClicked" />
+                    </TextCell.ContextActions>
                 </TextCell>
             </DataTemplate>
         </ListView.ItemTemplate>

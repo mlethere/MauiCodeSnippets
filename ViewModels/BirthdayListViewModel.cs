@@ -6,8 +6,12 @@ namespace MauiCodeSnippets.ViewModels
 {
     public class BirthdayListViewModel : ObservableObject
     {
-
         public ObservableCollection<BirthdayViewModel> BirthdayList { get; set; } = new ObservableCollection<BirthdayViewModel>();
+
+        public BirthdayListViewModel()
+        {
+            LoadBirthdayList();
+        }
 
         public void LoadBirthdayList()
         {
