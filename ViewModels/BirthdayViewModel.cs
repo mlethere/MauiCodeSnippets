@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using MauiCodeSnippets.BaseClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,28 +8,24 @@ using System.Threading.Tasks;
 
 namespace MauiCodeSnippets.ViewModels
 {
-    public class BirthdayViewModel : ObservableObject
+    public class BirthdayViewModel : ViewModelBaseClass
     {
+        public BirthdayViewModel()
+        {
+            Name = "unknown";
+        }
+
         private string _name = string.Empty;
         private DateTime _birthDate = DateTime.Now;
 
         public string Name
         {
             get => _name;
-            set => SetProperty(ref _name, value);
+            set
+            {
+                _name = value;
+                OnPropertyChanged();
+            }
         }
-
-        public DateTime BirthDate
-        {
-            get => _birthDate;
-            set => SetProperty(ref _birthDate, value);
-        }
-
-        public BirthdayViewModel(Models.BirthdayModel birthdayRecord)
-        {
-            _name = birthdayRecord.Name;
-            _birthDate = birthdayRecord.BirthDate;
-        }
-
     }
 }

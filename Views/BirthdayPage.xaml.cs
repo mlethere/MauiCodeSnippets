@@ -29,6 +29,17 @@ public partial class BirthdayPage : ContentPage
     /// <param name="e"></param>
     private void OnDeleteClicked(object sender, EventArgs e)
     {
+        // 20th October 2024.
+        // This is being called by the click even but I cannot seem to call the Remove method in the ListViewModel class
+
+        MenuItem menuItem = (MenuItem)sender;
+
+        // Although the Binding Context if BirthdayListViewModel the menu items are of type BirthdayViewModel
+        BirthdayViewModel selectedBirthdayItem = (ViewModels.BirthdayViewModel)menuItem.BindingContext;
+
+        // TODO: Next ... let us just find another example ......
+
+
 
     }
 }
