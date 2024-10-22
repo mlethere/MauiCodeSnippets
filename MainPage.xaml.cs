@@ -1,4 +1,5 @@
-﻿using MauiCodeSnippets.Views;
+﻿using MauiCodeSnippets.MvvmExample;
+using MauiCodeSnippets.Views;
 
 namespace MauiCodeSnippets
 {
