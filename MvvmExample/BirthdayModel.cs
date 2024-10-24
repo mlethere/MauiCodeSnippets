@@ -1,9 +1,5 @@
 ﻿namespace MauiCodeSnippets.MvvmExample
 {
-
-    /// <summary>
-    /// Static class. No data changes
-    /// </summary>
     //public static class BirthdayModelRepository
     //{
     //    /// <summary>

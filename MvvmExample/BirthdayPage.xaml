@@ -14,7 +14,11 @@
         <Border>
             <HorizontalStackLayout Spacing="12" HorizontalOptions="Center">
                 <VerticalStackLayout>
-                    <Entry HorizontalTextAlignment="Center" Text="{Binding MyVar,Mode=TwoWay}" />
+                    <Entry HorizontalTextAlignment="Center" Text="{Binding BirthdayRecord.Name,Mode=TwoWay}" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout>
+                    <Entry HorizontalTextAlignment="Center" Text="{Binding MyInt,Mode=TwoWay}" />
                 </VerticalStackLayout>
             </HorizontalStackLayout>
         </Border>

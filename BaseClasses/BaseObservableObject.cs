@@ -6,20 +6,20 @@ namespace MauiCodeSnippets.BaseClasses
     /// <summary>
     /// Base class that supports property change notifications.
     /// </summary>
-    public class ObservableObject : INotifyPropertyChanged
+    public partial class BaseObservableObject : INotifyPropertyChanged
     {
         /// <summary>
         /// <inheritdoc cref="INotifyPropertyChanged.PropertyChanged"/>/>
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged = delegate {};
+        public event PropertyChangedEventHandler? PropertyChanged = delegate { };
 
         /// <summary>
         /// Raised when the value of a property has changed.
         /// </summary>
         /// <param name="propertyName"></param>
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
-            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
