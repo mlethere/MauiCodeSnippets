@@ -48,6 +48,12 @@
                   Clicked="OnNumberPaidClicked"
                   HorizontalOptions="Fill" />
 
+            <Button
+                x:Name="btnMvvmBirthdays"
+                Text="MVVM Edit Page With a Date Picker"
+                Clicked="OnBirthdaysClicked"
+                HorizontalOptions="Fill" />
+
 
         </VerticalStackLayout>
     </ScrollView>

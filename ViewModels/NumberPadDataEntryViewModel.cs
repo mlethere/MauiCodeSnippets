@@ -52,13 +52,11 @@ namespace MauiCodeSnippets.ViewModels
 
         private void DialNumberByMark()
         {
-            // From this class, we cannot display an alert as we are not inherited from a ContentPage
-            // TODO: We will come back to this
             // Create a new page and Pop is pretending to dial a number .....
 
             ContentPage newPage = new NumberDialPadCallPage(_inputString);
             // Use the Navigation property to push the new page onto the navigation stack
-            Application.Current.MainPage.Navigation.PushAsync(newPage);
+            Application.Current?.MainPage?.Navigation.PushAsync(newPage);
 
         }
 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCodeSnippets.MvvmExample.BirthdayPage"
+             xmlns:viewModel="clr-namespace:MauiCodeSnippets.MvvmExample"
+             Title="Birthday Page - MVVM Example">
+    
+    <!--Removed Binding Context as the ViewModel is being created from a passed value-->
+
+    <VerticalStackLayout Padding="12">
+        <Label>Update Record</Label>
+        
+        <Border>
+            <HorizontalStackLayout Spacing="12" HorizontalOptions="Center">
+                <VerticalStackLayout>
+                    <Label>Name:</Label>
+                    <Entry HorizontalTextAlignment="Center" Text="{Binding BirthdayRecord.Name,Mode=TwoWay}" />
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <Label>Birth Date:
+                    </Label>
+                    <DatePicker Date="{Binding BirthdayRecord.BirthDate, Mode=TwoWay}" />
+                </VerticalStackLayout>
+                <Button Text="Save TBD"></Button>
+            </HorizontalStackLayout>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>
