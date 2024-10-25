@@ -50,7 +50,7 @@
 
             <Button
                 x:Name="btnMvvmBirthdays"
-                Text="Full MVVM Example with Saving Data to a Text File Databases"
+                Text="MVVM Edit Page With a Date Picker"
                 Clicked="OnBirthdaysClicked"
                 HorizontalOptions="Fill" />
 

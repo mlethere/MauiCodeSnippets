@@ -3,23 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiCodeSnippets.MvvmExample.BirthdayPage"
              xmlns:viewModel="clr-namespace:MauiCodeSnippets.MvvmExample"
-             Title="BirthdayPage">
-
-    <ContentPage.BindingContext>
-        <viewModel:BirthdayViewModel />
-    </ContentPage.BindingContext>
+             Title="Birthday Page - MVVM Example">
+    
+    <!--Removed Binding Context as the ViewModel is being created from a passed value-->
 
     <VerticalStackLayout Padding="12">
-        <Label>Resources</Label>
+        <Label>Update Record</Label>
+        
         <Border>
             <HorizontalStackLayout Spacing="12" HorizontalOptions="Center">
                 <VerticalStackLayout>
+                    <Label>Name:</Label>
                     <Entry HorizontalTextAlignment="Center" Text="{Binding BirthdayRecord.Name,Mode=TwoWay}" />
                 </VerticalStackLayout>
-
                 <VerticalStackLayout>
-                    <Entry HorizontalTextAlignment="Center" Text="{Binding MyInt,Mode=TwoWay}" />
+                    <Label>Birth Date:
+                    </Label>
+                    <DatePicker Date="{Binding BirthdayRecord.BirthDate, Mode=TwoWay}" />
                 </VerticalStackLayout>
+                <Button Text="Save TBD"></Button>
             </HorizontalStackLayout>
         </Border>
     </VerticalStackLayout>

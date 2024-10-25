@@ -33,7 +33,15 @@ namespace MauiCodeSnippets
         private void OnBirthdaysClicked(object sender, EventArgs e)
         {
             // Next : https://learn.microsoft.com/en-us/training/modules/design-mvvm-viewmodel/2-what-is-mvvm
-            Navigation.PushAsync(new BirthdayPage());
+
+            // Just demonstrating how to pass in a new model. This would come from another source like an API or Database Table.
+            Navigation.PushAsync(
+                new BirthdayPage(
+                    new BirthdayModel
+                    {
+                        Name = "Mark",
+                        BirthDate = new DateTime(1967, 9, 7)
+                    }));
         }
 
 

@@ -2,34 +2,17 @@
 
 namespace MauiCodeSnippets.MvvmExample
 {
-    public class BirthdayViewModel : BaseViewModel
+    public partial class BirthdayViewModel : BaseViewModel
     {
-        private BirthdayModel _birthdayRecord;
-        private int _myInt;
+        private BirthdayModel _birthdayRecord = new();
 
         public BirthdayViewModel()
         {
-            // TODO: Remove this line
-            // TODO: Use the Model
-            // TODO: ADD a list?
+            // TODO: ADD a list? --> Another example .. 
             // TODO: https://www.youtube.com/watch?v=H59lHvg4Cik
-            _birthdayRecord = new BirthdayModel
-            {
-                Name = "Mark",
-                BirthDate = new DateTime(1967, 9, 7)
-            };
-
-            _myInt = 42;
-        }
-
-        public int MyInt
-        {
-            get => _myInt;
-            set
-            {
-                _myInt = value;
-                OnPropertyChanged();
-            }
+            // TODO: Add in Cancel and Update buttons
+            // TODO: log that we "saved" the data
+            // TODO: Add a number so that we can "pick"
         }
 
         public BirthdayModel BirthdayRecord
