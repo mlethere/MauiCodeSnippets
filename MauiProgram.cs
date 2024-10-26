@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MauiCodeSnippets.MvvmExample2;
+using Microsoft.Extensions.Logging;
 
 namespace MauiCodeSnippets
 {
@@ -18,6 +19,10 @@ namespace MauiCodeSnippets
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+
+            // Added DI for BirthdayPage2ViewModel
+            builder.Services.AddSingleton<BirthdayPage2>();
+            builder.Services.AddSingleton<BirthdayPage2ViewModel>();
 
             return builder.Build();
         }

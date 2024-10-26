@@ -70,7 +70,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="MvvmExample\BirthdayPage.xaml">
+	  <MauiXaml Update="MvvmExample1\BirthdayPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MvvmExample2\BirthdayPage2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\CoolButtonPage.xaml">

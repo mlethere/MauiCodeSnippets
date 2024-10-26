@@ -1,0 +1,13 @@
+﻿https://community.devexpress.com/blogs/mobile/archive/2023/10/18/incorporate-crud-operations-into-your-app-with-devexpress-net-maui-collectionview.aspx
+TODO: Implement a CRUD operation 
+Add an API pull
+Read how I could add secrets to the app
+How can I save data to a database Azure "behind" the scenes
+Best practices for saving data to a database
+Different UI designs 
+
+Just saw this in a Microsoft Learn video
+In a CollectionVew.ItemTemplate
+A swipteView
+SwipeItems Text =Delete BackgroundColor=Red
+https://www.youtube.com/watch?v=5Qga2pniN78

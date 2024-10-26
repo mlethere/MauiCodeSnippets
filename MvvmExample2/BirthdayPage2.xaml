@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCodeSnippets.MvvmExample2.BirthdayPage2"
+             xmlns:viewModel="clr-namespace:MauiCodeSnippets.MvvmExample2"
+             x:DataType="viewModel:BirthdayPage2ViewModel"
+             Title="BirthdayPage2">
+
+    <!--Above I have added the namespace and a DataType pointing to the viewModel which associates this page with this viewModel-->
+
+    <Grid RowDefinitions="100, Auto, *"
+         ColumnDefinitions=".75*, .25*"
+        Padding="10"
+          RowSpacing="10"
+            ColumnSpacing="10">
+
+        <Entry Placeholder="Enter Name"
+               Text="{Binding Text}"
+               Grid.Row="1" />
+        
+        <!--As we are using code generators we issue a AddCommand that then calls Add-->
+        <Button Text="Add"
+                Command="{Binding AddCommand}"
+                Grid.Row="1"
+                Grid.Column="1" />
+
+        <!--ItemSource is now bound to the list of items-->
+        <CollectionView 
+            Grid.Row="2" 
+            Grid.Column="0" 
+            Grid.ColumnSpan="2"
+            ItemsSource="{Binding Items}">
+           
+            <!--Make the data template associate with type string / this would normally be a model -->
+            <CollectionView.ItemTemplate>
+                <DataTemplate 
+                    x:DataType="{x:Type x:String}">
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <!--This doesn't appear to work on Windows Machine. The binding is somewhat complicated-->
+                                <!--The RelativeSource equates to move up in the hierachy (DOM?) until we find that ViewModel type -->
+                                <!-- The RemoveCommand is ao interesting  -->
+                                <SwipeItem 
+                                    Text="Delete" 
+                                    BackgroundColor="Red"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:BirthdayPage2ViewModel}}, Path=RemoveCommand}"
+                                    CommandParameter="{Binding .}"
+                                    />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <Grid Padding="0,5">
+                            <Frame>
+                                <Label Text="{Binding .}" FontSize="24" />
+                            </Frame>
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

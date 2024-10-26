@@ -62,7 +62,7 @@ namespace MauiCodeSnippets.ViewModels
 
         public void SetNumberToDial(string numberToDial)
         {
-            /// Not sure that this is the best way to do this ..... when I cover passing view models I may come back to this.
+            // Not sure that this is the best way to do this ..... when I cover passing view models I may come back to this.
             InputString = numberToDial;
         }
 

@@ -54,6 +54,12 @@
                 Clicked="OnBirthdaysClicked"
                 HorizontalOptions="Fill" />
 
+            <Button
+     x:Name="btnMvvmBirthdays2"
+     Text="MVVM version 2"
+     Clicked="OnBirthdays2Clicked"
+     HorizontalOptions="Fill" />
+
 
         </VerticalStackLayout>
     </ScrollView>

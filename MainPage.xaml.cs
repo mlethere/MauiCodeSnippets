@@ -1,4 +1,5 @@
 ﻿using MauiCodeSnippets.MvvmExample;
+using MauiCodeSnippets.MvvmExample2;
 using MauiCodeSnippets.Views;
 
 namespace MauiCodeSnippets
@@ -44,6 +45,14 @@ namespace MauiCodeSnippets
                     }));
         }
 
-
+        /// <summary>
+        /// Version 2 of MVVM example
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnBirthdays2Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new BirthdayPage2(new BirthdayPage2ViewModel()));
+        }
     }
 }
