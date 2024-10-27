@@ -8,11 +8,17 @@
 
     <!--Above I have added the namespace and a DataType pointing to the viewModel which associates this page with this viewModel-->
 
-    <Grid RowDefinitions="100, Auto, *"
-         ColumnDefinitions=".75*, .25*"
+    <!-- ColumnDefinition is 75% and 25% -->
+    <!-- RowDefinition is 100 "pixels" for a Logo, Auto is take as much space as needed by Text Entry, and * is fill the balance -->
+    <!-- Padding is whole grid indent to keep it off the edges of the screen -->
+    <!-- Row Spacing and Column Spacing is the gap between the rows and columns -->
+    
+    <Grid
+        RowDefinitions="100, Auto, *"
+        ColumnDefinitions=".75*, .25*"
         Padding="10"
-          RowSpacing="10"
-            ColumnSpacing="10">
+        RowSpacing="10"
+        ColumnSpacing="10">
 
         <Entry Placeholder="Enter Name"
                Text="{Binding Text}"
@@ -49,6 +55,8 @@
                                     />
                             </SwipeItems>
                         </SwipeView.RightItems>
+                        
+                        <!-- This below is the design for the collection view. Frame gives it a border, I am not sure on the Grid -->
                         <Grid Padding="0,5">
                             <Frame>
                                 <Label Text="{Binding .}" FontSize="24" />

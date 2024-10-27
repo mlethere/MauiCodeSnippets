@@ -21,6 +21,9 @@ namespace MauiCodeSnippets
 #endif
 
             // Added DI for BirthdayPage2ViewModel
+            // Singleton is a global page. Loaded once
+            // Transient is a new instance each time
+
             builder.Services.AddSingleton<BirthdayPage2>();
             builder.Services.AddSingleton<BirthdayPage2ViewModel>();
 
