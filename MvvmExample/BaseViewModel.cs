@@ -1,4 +1,4 @@
-﻿namespace MauiCodeSnippets.BaseClasses
+﻿namespace MauiCodeSnippets.MvvmExample
 {
     /// <summary>
     /// Base class for modeling a view that supports change notifications.

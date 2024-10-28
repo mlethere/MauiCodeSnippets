@@ -1,6 +1,4 @@
-﻿using MauiCodeSnippets.BaseClasses;
-
-namespace MauiCodeSnippets.MvvmExample
+﻿namespace MauiCodeSnippets.MvvmExample
 {
     public partial class BirthdayViewModel : BaseViewModel
     {

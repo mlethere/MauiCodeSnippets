@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace MauiCodeSnippets.BaseClasses
+namespace MauiCodeSnippets.MvvmExample
 {
     /// <summary>
     /// Base class that supports property change notifications.
