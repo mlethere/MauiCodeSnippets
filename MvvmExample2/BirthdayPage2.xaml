@@ -31,11 +31,13 @@
                 Grid.Column="1" />
 
         <!--ItemSource is now bound to the list of items-->
+        <!--Set SelectionMode to None, so that we can add Navigation to Frame -->
         <CollectionView 
             Grid.Row="2" 
             Grid.Column="0" 
             Grid.ColumnSpan="2"
-            ItemsSource="{Binding Items}">
+            ItemsSource="{Binding Items}"
+            SelectionMode="None">
            
             <!--Make the data template associate with type string / this would normally be a model -->
             <CollectionView.ItemTemplate>
@@ -59,6 +61,13 @@
                         <!-- This below is the design for the collection view. Frame gives it a border, I am not sure on the Grid -->
                         <Grid Padding="0,5">
                             <Frame>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:BirthdayPage2ViewModel}}, Path=TapCommand}"
+                                            CommandParameter="{Binding .}">
+
+                                        </TapGestureRecognizer>
+                                    </Frame.GestureRecognizers>
                                 <Label Text="{Binding .}" FontSize="24" />
                             </Frame>
                         </Grid>

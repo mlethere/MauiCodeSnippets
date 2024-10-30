@@ -26,6 +26,8 @@ namespace MauiCodeSnippets
 
             builder.Services.AddSingleton<BirthdayPage2>();
             builder.Services.AddSingleton<BirthdayPage2ViewModel>();
+            builder.Services.AddTransient<DetailViewModel>();
+            builder.Services.AddTransient<DetailPage>();
 
             return builder.Build();
         }

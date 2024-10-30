@@ -76,6 +76,9 @@
 	  <MauiXaml Update="MvvmExample2\BirthdayPage2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="MvvmExample2\DetailPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\CoolButtonPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -96,6 +99,7 @@
 	<ItemGroup>
 	  <Folder Include="BaseClasses\" />
 	  <Folder Include="Models\" />
+	  <Folder Include="NavigationExamples\" />
 	</ItemGroup>
 
 </Project>

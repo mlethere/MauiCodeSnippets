@@ -1,7 +1,10 @@
-﻿https://community.devexpress.com/blogs/mobile/archive/2023/10/18/incorporate-crud-operations-into-your-app-with-devexpress-net-maui-collectionview.aspx
+﻿https://www.youtube.com/watch?v=gy7X1IZKeQQ&list=PLdo4fOcmZ0oUBAdL2NwBpDs32zwGqb9DY&index=7
+https://community.devexpress.com/blogs/mobile/archive/2023/10/18/incorporate-crud-operations-into-your-app-with-devexpress-net-maui-collectionview.aspx
 TODO: Implement a CRUD operation 
 Add an API pull
 Read how I could add secrets to the app
 How can I save data to a database Azure "behind" the scenes
 Best practices for saving data to a database
 Different UI designs 
+
+https://github.com/jsuarezruiz/awesome-dotnet-maui
