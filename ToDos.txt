@@ -6,5 +6,6 @@ Read how I could add secrets to the app
 How can I save data to a database Azure "behind" the scenes
 Best practices for saving data to a database
 Different UI designs 
+Calendar?
 
 https://github.com/jsuarezruiz/awesome-dotnet-maui

@@ -1,4 +1,5 @@
-﻿using MauiCodeSnippets.MvvmExample2;
+﻿using MauiCodeSnippets.InternetConnectivity;
+using MauiCodeSnippets.MvvmExample2;
 using Microsoft.Extensions.Logging;
 
 namespace MauiCodeSnippets
@@ -24,10 +25,16 @@ namespace MauiCodeSnippets
             // Singleton is a global page. Loaded once
             // Transient is a new instance each time
 
+            // For MccmExample2
             builder.Services.AddSingleton<BirthdayPage2>();
             builder.Services.AddSingleton<BirthdayPage2ViewModel>();
             builder.Services.AddTransient<DetailViewModel>();
             builder.Services.AddTransient<DetailPage>();
+
+            // For the InternetConnectivity example
+            builder.Services.AddSingleton<IsConnectedPage>();
+            builder.Services.AddSingleton<IsConnectedViewModel>();
+            builder.Services.AddSingleton<IConnectivity>(Connectivity.Current);
 
             return builder.Build();
         }

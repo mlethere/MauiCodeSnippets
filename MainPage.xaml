@@ -55,6 +55,12 @@
                 HorizontalOptions="Fill" />
 
             <Button
+                x:Name="btnIsConnectedToInternet"
+                Text="Check My Internet Connection"
+                Clicked="OnInternetConnectivity"
+                HorizontalOptions="Fill" />
+
+            <Button
      x:Name="btnMvvmBirthdays2"
      Text="MVVM version 2"
      Clicked="OnBirthdays2Clicked"

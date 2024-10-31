@@ -70,6 +70,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="InternetConnectivity\IsConnectedPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MvvmExample1\BirthdayPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

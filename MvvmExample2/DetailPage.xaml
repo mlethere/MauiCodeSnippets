@@ -8,7 +8,7 @@
 
     <VerticalStackLayout>
         <Label
-            Text="Your selected .." HorizontalOptions="Center" />
+            Text="You selected .." HorizontalOptions="Center" />
 
         <Label 
             Text="{Binding Text}"

@@ -1,4 +1,5 @@
-﻿using MauiCodeSnippets.MvvmExample;
+﻿using MauiCodeSnippets.InternetConnectivity;
+using MauiCodeSnippets.MvvmExample;
 using MauiCodeSnippets.MvvmExample2;
 using MauiCodeSnippets.Views;
 
@@ -53,6 +54,11 @@ namespace MauiCodeSnippets
         private void OnBirthdays2Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new BirthdayPage2(new BirthdayPage2ViewModel()));
+        }
+
+        private async void OnInternetConnectivity(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(IsConnectedPage));
         }
     }
 }
