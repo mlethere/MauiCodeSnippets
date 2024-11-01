@@ -1,4 +1,5 @@
-﻿using MauiCodeSnippets.InternetConnectivity;
+﻿using MauiCodeSnippets.DateTimePickerExamples;
+using MauiCodeSnippets.InternetConnectivity;
 using MauiCodeSnippets.MvvmExample;
 using MauiCodeSnippets.MvvmExample2;
 using MauiCodeSnippets.Views;
@@ -59,6 +60,11 @@ namespace MauiCodeSnippets
         private async void OnInternetConnectivity(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync(nameof(IsConnectedPage));
+        }
+
+        private async void OnDateTimeExamples(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(DT_ExamplePage));
         }
     }
 }

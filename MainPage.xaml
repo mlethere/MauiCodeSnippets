@@ -59,12 +59,20 @@
                 Text="Check My Internet Connection"
                 Clicked="OnInternetConnectivity"
                 HorizontalOptions="Fill" />
-
             <Button
-     x:Name="btnMvvmBirthdays2"
-     Text="MVVM version 2"
-     Clicked="OnBirthdays2Clicked"
-     HorizontalOptions="Fill" />
+                 x:Name="btnMvvmBirthdays2"
+                 Text="MVVM version 2"
+                 Clicked="OnBirthdays2Clicked"
+                 HorizontalOptions="Fill" />
+            
+            <Button
+                x:Name="btnDateTimeExamplesButton"
+                Text="Date &amp; Time Picker Examples"
+                Clicked="OnDateTimeExamples"
+                HorizontalOptions="Fill" />
+
+
+            
 
 
         </VerticalStackLayout>

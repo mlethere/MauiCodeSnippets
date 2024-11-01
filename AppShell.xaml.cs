@@ -1,4 +1,5 @@
-﻿using MauiCodeSnippets.InternetConnectivity;
+﻿using MauiCodeSnippets.DateTimePickerExamples;
+using MauiCodeSnippets.InternetConnectivity;
 using MauiCodeSnippets.MvvmExample2;
 
 namespace MauiCodeSnippets
@@ -9,9 +10,9 @@ namespace MauiCodeSnippets
         {
             InitializeComponent();
 
-            // Added for MvvmExample2 ...
             Routing.RegisterRoute(nameof(DetailPage), typeof(DetailPage));
             Routing.RegisterRoute(nameof(IsConnectedPage), typeof(IsConnectedPage));
+            Routing.RegisterRoute(nameof(DT_ExamplePage), typeof(DT_ExamplePage));
         }
     }
 }

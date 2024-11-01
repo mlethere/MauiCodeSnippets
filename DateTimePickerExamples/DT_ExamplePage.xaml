@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCodeSnippets.DateTimePickerExamples.DT_ExamplePage"
+             Title="DT_ExamplePage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Date &amp; Time Pickers"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label Text="There are 4 versions of calendar that can be used per Microsoft" />
+
+        <Label Text="Calendar View are on GitHub and not native" />
+
+
+
+        <TimePicker Time="4:15:26" HorizontalOptions="Fill" />
+        <TimePicker Time="4:15:26"
+                    Background="Azure"
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    TextColor="Blue"
+                    HorizontalOptions="Fill" />
+
+        <DatePicker 
+            Date="2024-11-01" 
+            MaximumDate="2024-11-07" 
+            MinimumDate="2024-01-13"
+            BackgroundColor="PaleVioletRed"
+            FlowDirection="LeftToRight"
+            FontAttributes="Italic"
+            FontAutoScalingEnabled="True"
+            WidthRequest="200"
+            
+            />
+
+
+        <DatePicker 
+    Date="2024-11-01" 
+    MaximumDate="2024-11-07" 
+    MinimumDate="2024-01-13"
+    BackgroundColor="CadetBlue"
+    FlowDirection="RightToLeft"
+    />
+
+    </VerticalStackLayout>
+</ContentPage>
