@@ -71,8 +71,13 @@
                 Clicked="OnDateTimeExamples"
                 HorizontalOptions="Fill" />
 
+            <Button
+                x:Name="btnApiClientExample"
+                Text="API REST Example"
+                Clicked="OnApiClientExampleClicked"
+                HorizontalOptions="Fill" /> 
 
-            
+
 
 
         </VerticalStackLayout>

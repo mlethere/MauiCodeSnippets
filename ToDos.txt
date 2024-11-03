@@ -1,11 +1,8 @@
-﻿https://www.youtube.com/watch?v=gy7X1IZKeQQ&list=PLdo4fOcmZ0oUBAdL2NwBpDs32zwGqb9DY&index=7
-https://community.devexpress.com/blogs/mobile/archive/2023/10/18/incorporate-crud-operations-into-your-app-with-devexpress-net-maui-collectionview.aspx
-TODO: Implement a CRUD operation 
-Add an API pull
-Read how I could add secrets to the app
-How can I save data to a database Azure "behind" the scenes
+﻿Read how I could add secrets to the app
 Best practices for saving data to a database
 Different UI designs 
 Calendar?
-
+Add Blazor to my app
 https://github.com/jsuarezruiz/awesome-dotnet-maui
+Data Sycnhronization: https://learn.microsoft.com/en-us/dynamics365/field-service/mobile/offline-data-sync
+Remote Data API: https://learn.microsoft.com/en-us/dotnet/architecture/maui/accessing-remote-data
