@@ -64,6 +64,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="GlobalViewModelExample\GlobalViewModelPage1.xaml.cs">
+	    <DependentUpon>GlobalViewModelPage1.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\SimpleVVMwithTimerPage.xaml.cs">
 	    <DependentUpon>SimpleVVMwithTimerPage.xaml</DependentUpon>
 	  </Compile>
@@ -74,6 +77,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="DateTimePickerExamples\DT_ExamplePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="GlobalViewModelExample\GlobalViewModelPage1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="GlobalViewModelExample\GlobalViewModelPage2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="InternetConnectivity\IsConnectedPage.xaml">

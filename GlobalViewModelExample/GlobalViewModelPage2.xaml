@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCodeSnippets.GlobalViewModelExample.GlobalViewModelPage2"
+             xmlns:viewModel="clr-namespace:MauiCodeSnippets.GlobalViewModelExample"
+             x:DataType="viewModel:GlobalViewModel"
+             Title="Page 2">
+    <VerticalStackLayout>
+        <Label 
+            Text="Page 2 With Global View Model. Click the Add and a new DateTime will be added to the Global ViewModel"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button Text="Add"
+            Command="{Binding AddCommand}"
+            />
+
+        <ListView ItemsSource="{Binding MyDateTimes}">
+        </ListView>
+        
+        
+    </VerticalStackLayout>
+</ContentPage>
