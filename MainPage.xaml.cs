@@ -1,5 +1,6 @@
 ﻿using MauiCodeSnippets.ApiClientExample;
 using MauiCodeSnippets.DateTimePickerExamples;
+using MauiCodeSnippets.GlobalViewModelExample;
 using MauiCodeSnippets.InternetConnectivity;
 using MauiCodeSnippets.MvvmExample;
 using MauiCodeSnippets.MvvmExample2;
@@ -71,6 +72,16 @@ namespace MauiCodeSnippets
         private async void OnApiClientExampleClicked(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync(nameof(ApiClientExamplePage));
+        }
+
+        private async void OnGlobalDataExampleClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(GlobalViewModelPage1));
+        }
+
+        private async void OnGlobalDataExample2Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(GlobalViewModelPage2));
         }
     }
 }
