@@ -107,6 +107,8 @@
 
 	<ItemGroup>
 	  <Folder Include="BaseClasses\" />
+	  <Folder Include="Crud\Views\" />
+	  <Folder Include="Crud\ViewModels\" />
 	  <Folder Include="Models\" />
 	  <Folder Include="NavigationExamples\" />
 	</ItemGroup>
