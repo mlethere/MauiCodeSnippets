@@ -1,0 +1,13 @@
+﻿Mark Letheren
+8th November 2024
+MVVM Setup
+
+Folders:
+- Models
+- ViewModels
+- Views
+
+Views:
+- Add page with Page suffix
+- In Maui Program, add service type
+- In AppShell.xaml, add Routing

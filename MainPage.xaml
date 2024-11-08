@@ -75,7 +75,13 @@
                 x:Name="btnApiClientExample"
                 Text="API REST Example"
                 Clicked="OnApiClientExampleClicked"
-                HorizontalOptions="Fill" /> 
+                HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="btnCrudExample"
+                Text="CRUD Example"
+                Clicked="OnCrudExampleClicked"
+                HorizontalOptions="Fill" />
 
 
 

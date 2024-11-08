@@ -72,5 +72,10 @@ namespace MauiCodeSnippets
         {
             await Shell.Current.GoToAsync(nameof(ApiClientExamplePage));
         }
+
+        private void OnCrudExampleClicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

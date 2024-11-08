@@ -1,4 +1,5 @@
 ﻿using MauiCodeSnippets.ApiClientExample;
+using MauiCodeSnippets.Crud.Views;
 using MauiCodeSnippets.InternetConnectivity;
 using MauiCodeSnippets.MvvmExample2;
 using Microsoft.Extensions.Logging;
@@ -38,6 +39,8 @@ namespace MauiCodeSnippets
             builder.Services.AddSingleton<IsConnectedPage>();
             builder.Services.AddSingleton<IsConnectedViewModel>();
             builder.Services.AddSingleton<IConnectivity>(Connectivity.Current);
+
+            builder.Services.AddSingleton<CrudMainPage>();
 
             return builder.Build();
         }

@@ -73,6 +73,9 @@
 	  <MauiXaml Update="ApiClientExample\ApiClientExamplePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Crud\Views\CrudMainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="DateTimePickerExamples\DT_ExamplePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -107,7 +110,6 @@
 
 	<ItemGroup>
 	  <Folder Include="BaseClasses\" />
-	  <Folder Include="Crud\Views\" />
 	  <Folder Include="Crud\ViewModels\" />
 	  <Folder Include="Models\" />
 	  <Folder Include="NavigationExamples\" />
