@@ -1,4 +1,5 @@
 ﻿using MauiCodeSnippets.ApiClientExample;
+using MauiCodeSnippets.Crud.Views;
 using MauiCodeSnippets.DateTimePickerExamples;
 using MauiCodeSnippets.GlobalViewModelExample;
 using MauiCodeSnippets.InternetConnectivity;
@@ -74,8 +75,10 @@ namespace MauiCodeSnippets
             await Shell.Current.GoToAsync(nameof(ApiClientExamplePage));
         }
 
-        private void OnCrudExampleClicked(object sender, EventArgs e)
+        private async void OnCrudExampleClicked(object sender, EventArgs e)
         {
+            await Shell.Current.GoToAsync(nameof(CrudMainPage));
+        }
 
         private async void OnGlobalDataExampleClicked(object sender, EventArgs e)
         {

@@ -11,3 +11,23 @@ Views:
 - Add page with Page suffix
 - In Maui Program, add service type
 - In AppShell.xaml, add Routing
+
+ViewModel:
+- Add ViewModel suffix
+- Update: public partial class GlobalViewModel : ObservableObject
+- In Maui program, add service type
+
+Update View:
+- Add: xmlns:viewModel="clr-namespace:MauiCodeSnippets.Crud.ViewModels"
+       x:DataType="viewModel:CrudMainViewModel"
+
+Update Binding in View:
+- Change constructor to: public CrudMainPage(CrudMainViewModel vm)
+- Set BindingContext to vm : BindingContext = vm;
+- This could be a global view model (see GlobalViewModel examples) as setup is sightly different
+
+Add click event to test page:
+-private async void OnCrudExampleClicked(object sender, EventArgs e)
+-{
+-    await Shell.Current.GoToAsync(nameof(CrudMainPage));
+-}

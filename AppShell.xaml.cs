@@ -19,6 +19,7 @@ namespace MauiCodeSnippets
             Routing.RegisterRoute(nameof(ApiClientExamplePage), typeof(ApiClientExamplePage));
             Routing.RegisterRoute(nameof(GlobalViewModelPage1), typeof(GlobalViewModelPage1));
             Routing.RegisterRoute(nameof(GlobalViewModelPage2), typeof(GlobalViewModelPage2));
+            Routing.RegisterRoute(nameof(CrudMainPage), typeof(CrudMainPage));
         }
     }
 }
