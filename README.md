@@ -9,10 +9,9 @@
 
 # Mark Letheren .Net Maui Code Snippets Repository
 
-I have been having a bit of a mental challenge migrating from XAML to .Net MAUI. Everytime I try do something I get stumped, and that is typically
-caused by not having a very good foundation.
+I've been facing some mental hurdles in migrating from XAML to .NET MAUI. Each time I attempt something new, I often find myself stumped, likely because I lack a solid foundational understanding of the framework.
 
-I am going to create a list of code snippets / examples, based on Microsoft's documentaiton and then expanded upon.
+I am going to create a list of code snippets / examples, based on Microsoft's documentation and then expand upon it.
 
 
 ## Online Resources by Mark Letheren
@@ -30,9 +29,9 @@ I am going to create a list of code snippets / examples, based on Microsoft's do
 
 
 ## Who am I, Mark Letheren
-I am the Vice President of Information Technology & Innovation for Positive Fulfillment Services Ltd. Even though I may not be coding all the time any longer, innovations not only come from observing systems and human behaviours, it also does come from software R&D. Obviously talking and learning are enormously important too.
+As the Vice President of Information Technology & Innovation at Positive Fulfillment Services Ltd., my role involves more than just hands-on coding. Innovation arises not only from observing systems and human behaviors but also from dedicated research and development in software. Engaging in conversations and continuous learning are equally essential to drive impactful solutions.
 
-My strengths are order entry, warehouse management, transport management systems, but anything to do with Warehouse Management, Fulfillment Systems, I have worked on since 1986. 
+My expertise spans EDI, order entry, warehouse management, and transport management systems. I have been working with warehouse management and fulfillment systems since 1986, bringing a deep and seasoned understanding to all aspects of these areas.
 
 
 

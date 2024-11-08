@@ -83,7 +83,17 @@
                 Clicked="OnCrudExampleClicked"
                 HorizontalOptions="Fill" />
 
+            <Button
+                x:Name="btnGlobalDataExampleClicked"
+                Text="App Wide Global ViewModel Sample Page 1"
+                Clicked="OnGlobalDataExampleClicked"
+                HorizontalOptions="Fill" />
 
+            <Button
+                x:Name="btnGlobalDataExampleClicked2"
+                Text="App Wide Global ViewModel Sample Page 2"
+                Clicked="OnGlobalDataExample2Clicked"
+                HorizontalOptions="Fill" />
 
 
         </VerticalStackLayout>

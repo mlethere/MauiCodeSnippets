@@ -1,5 +1,6 @@
 ﻿using MauiCodeSnippets.ApiClientExample;
 using MauiCodeSnippets.Crud.Views;
+using MauiCodeSnippets.GlobalViewModelExample;
 using MauiCodeSnippets.InternetConnectivity;
 using MauiCodeSnippets.MvvmExample2;
 using Microsoft.Extensions.Logging;
@@ -33,7 +34,11 @@ namespace MauiCodeSnippets
             builder.Services.AddTransient<DetailPage>();
             builder.Services.AddSingleton<ApiClientExampleViewModel>();
             builder.Services.AddSingleton<ApiClientExamplePage>();
-
+            
+            // Used so that I can have a global view model.
+            builder.Services.AddSingleton<GlobalViewModel>();
+            builder.Services.AddSingleton<GlobalViewModelPage1>();
+            builder.Services.AddSingleton<GlobalViewModelPage2>();
 
             // For the InternetConnectivity example
             builder.Services.AddSingleton<IsConnectedPage>();
