@@ -31,3 +31,19 @@ Add click event to test page:
 -{
 -    await Shell.Current.GoToAsync(nameof(CrudMainPage));
 -}
+
+Add a text field to the view:
+- In ViewModel:
+    [ObservableProperty]
+    private string familyName = string.Empty;
+
+- In View:
+    <Entry Text="{Binding FamilyName, Mode=TwoWay}" />
+
+Add a command but to the view:
+- In ViewModel:
+    [RelayCommand]
+    void UpdateFamilyName(string item)
+
+- In View:
+    <Button Text="Add" Command="{Binding UpdateFamilyNameCommand}" />

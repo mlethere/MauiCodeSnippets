@@ -83,6 +83,15 @@ public class CrudModel
     }
 
     /// <summary>
+    /// Return the local file name - of course, this is just for interest
+    /// </summary>
+    /// <returns></returns>
+    public string GetLocalFilename()
+    {
+        return _fileName;
+    }
+
+    /// <summary>
     /// Main Family Model
     /// </summary>
     public class FamilyModel

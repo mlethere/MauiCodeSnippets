@@ -7,8 +7,17 @@
              Title="CrudMainPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Family Tree"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <Entry Placeholder="Enter Name"
+           Text="{Binding FamilyName, Mode=TwoWay}"
+            />
+
+        <Button Text="Update" Command="{Binding UpdateFamilyNameCommand}" />
+
+        <Button Text="Get local filename" Command="{Binding GetLocalDbFileNameCommand}" />
+
     </VerticalStackLayout>
 </ContentPage>
