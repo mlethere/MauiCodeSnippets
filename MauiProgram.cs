@@ -46,8 +46,8 @@ namespace MauiCodeSnippets
             builder.Services.AddSingleton<IsConnectedViewModel>();
             builder.Services.AddSingleton<IConnectivity>(Connectivity.Current);
 
-            builder.Services.AddSingleton<CrudMainPage>();
-            builder.Services.AddSingleton<CrudMainViewModel>();
+            builder.Services.AddTransient<CrudMainPage>();
+            builder.Services.AddTransient<CrudMainViewModel>();
 
             return builder.Build();
         }

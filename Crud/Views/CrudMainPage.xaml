@@ -19,5 +19,54 @@
 
         <Button Text="Get local filename" Command="{Binding GetLocalDbFileNameCommand}" />
 
+        <Entry Placeholder="Enter Member Name"
+            Text="{Binding NewFamilyName, Mode=TwoWay}"
+                />
+
+        <DatePicker 
+            Date="{Binding DateOfBirth, Mode=TwoWay}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button Text="Add Family Member" Command="{Binding AddFamilyMemberCommand}" />
+
+        <CollectionView 
+            ItemsSource="{Binding KidsNames}"
+            SelectionMode="None">
+
+            <!--Make the data template associate with type string / this would normally be a model -->
+            <CollectionView.ItemTemplate>
+                <DataTemplate 
+                    x:DataType="{x:Type x:String}">
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem 
+                                    Text="Delete" 
+                                    BackgroundColor="Red"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CrudMainViewModel}}, Path=RemoveFamilyMemberCommand}"
+                                    CommandParameter="{Binding .}"
+                            />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+
+                        <!-- This below is the design for the collection view. Frame gives it a border, I am not sure on the Grid -->
+                        <Grid Padding="0,5">
+                            <Frame>
+                                <!--<Frame.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CrudMainViewModel}}, Path=TapCommand}"
+                                    CommandParameter="{Binding .}">
+
+                                    </TapGestureRecognizer>
+                                </Frame.GestureRecognizers>-->
+                                <Label Text="{Binding .}" FontSize="24" />
+                            </Frame>
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
     </VerticalStackLayout>
 </ContentPage>
