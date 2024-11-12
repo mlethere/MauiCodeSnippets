@@ -4,6 +4,7 @@
              x:Class="MauiCodeSnippets.Crud.Views.CrudMainPage"
              xmlns:viewModel="clr-namespace:MauiCodeSnippets.Crud.ViewModels"
              x:DataType="viewModel:CrudMainViewModel"
+             xmlns:models="clr-namespace:MauiCodeSnippets.Crud.Models"
              Title="CrudMainPage">
     <VerticalStackLayout>
         <Label 
@@ -30,43 +31,18 @@
 
         <Button Text="Add Family Member" Command="{Binding AddFamilyMemberCommand}" />
 
-        <CollectionView 
-            ItemsSource="{Binding KidsNames}"
-            SelectionMode="None">
+        <CollectionView ItemsSource="{Binding Members}" >
 
             <!--Make the data template associate with type string / this would normally be a model -->
             <CollectionView.ItemTemplate>
                 <DataTemplate 
-                    x:DataType="{x:Type x:String}">
-                    <SwipeView>
-                        <SwipeView.RightItems>
-                            <SwipeItems>
-                                <SwipeItem 
-                                    Text="Delete" 
-                                    BackgroundColor="Red"
-                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CrudMainViewModel}}, Path=RemoveFamilyMemberCommand}"
-                                    CommandParameter="{Binding .}"
-                            />
-                            </SwipeItems>
-                        </SwipeView.RightItems>
-
-                        <!-- This below is the design for the collection view. Frame gives it a border, I am not sure on the Grid -->
-                        <Grid Padding="0,5">
-                            <Frame>
-                                <!--<Frame.GestureRecognizers>
-                                    <TapGestureRecognizer
-                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CrudMainViewModel}}, Path=TapCommand}"
-                                    CommandParameter="{Binding .}">
-
-                                    </TapGestureRecognizer>
-                                </Frame.GestureRecognizers>-->
-                                <Label Text="{Binding .}" FontSize="24" />
-                            </Frame>
-                        </Grid>
-                    </SwipeView>
+                    x:DataType="{x:Type models:PersonModel}">
+                    <Grid ColumnDefinitions="Auto,Auto">
+                        <Label Text="{Binding FirstName}" Grid.Column="0" />
+                        <Label Text="{Binding DateOfBirth}" Grid.Column="1" />
+                    </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-
     </VerticalStackLayout>
 </ContentPage>

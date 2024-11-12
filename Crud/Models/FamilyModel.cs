@@ -27,13 +27,27 @@ public class CrudModel
     /// </summary>
     /// <param name="firstName"></param>
     /// <param name="dateOfBirth"></param>
-    public void AddFamilyMember(string firstName, DateOnly dateOfBirth)
+    public bool AddFamilyMember(string firstName, DateTime dateOfBirth)
     {
+        // I would never validate like this in a real app
+        if (string.IsNullOrWhiteSpace(firstName))
+            return false;
+
+        if (Family.FamilyMembers.Any(x => x.FirstName == firstName))
+            return false;
+
+        if (dateOfBirth <= DateTime.MinValue)
+            return false;
+
         Family.FamilyMembers.Add(new PersonModel
         {
             FirstName = firstName,
             DateOfBirth = dateOfBirth
         });
+
+        SaveToLocalFile();
+
+        return true;
     }
 
     /// <summary>
@@ -42,7 +56,7 @@ public class CrudModel
     /// <param name="firstName"></param>
     /// <param name="newFirstName"></param>
     /// <param name="newDateOfBirth"></param>
-    public void EditFamilyMember(string firstName, string newFirstName, DateOnly newDateOfBirth)
+    public void EditFamilyMember(string firstName, string newFirstName, DateTime newDateOfBirth)
     {
         var person = Family.FamilyMembers.FirstOrDefault(x => x.FirstName == firstName);
         if (person != null)
@@ -50,6 +64,15 @@ public class CrudModel
             person.FirstName = newFirstName;
             person.DateOfBirth = newDateOfBirth;
         }
+    }
+
+    /// <summary>
+    /// Return the local file name - of course, this is just for interest
+    /// </summary>
+    /// <returns></returns>
+    public string GetLocalFilename()
+    {
+        return _fileName;
     }
 
     /// <summary>
@@ -81,31 +104,22 @@ public class CrudModel
         string json = JsonSerializer.Serialize(Family);
         File.WriteAllText(_fileName, json);
     }
+}
 
-    /// <summary>
-    /// Return the local file name - of course, this is just for interest
-    /// </summary>
-    /// <returns></returns>
-    public string GetLocalFilename()
-    {
-        return _fileName;
-    }
+/// <summary>
+/// Main Family Model
+/// </summary>
+public class FamilyModel
+{
+    public List<PersonModel> FamilyMembers { get; set; } = [];
+    public string FamilyName { get; set; } = string.Empty;
+}
 
-    /// <summary>
-    /// Main Family Model
-    /// </summary>
-    public class FamilyModel
-    {
-        public List<PersonModel> FamilyMembers { get; set; } = [];
-        public string FamilyName { get; set; } = string.Empty;
-    }
-
-    /// <summary>
-    /// Person seems cold, but it's a family member
-    /// </summary>
-    public class PersonModel
-    {
-        public DateOnly DateOfBirth { get; set; }
-        public string FirstName { get; set; } = string.Empty;
-    }
+/// <summary>
+/// Person seems cold, but it's a family member
+/// </summary>
+public class PersonModel
+{
+    public DateTime DateOfBirth { get; set; }
+    public string FirstName { get; set; } = string.Empty;
 }
