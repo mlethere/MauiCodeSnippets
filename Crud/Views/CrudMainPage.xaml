@@ -6,43 +6,74 @@
              x:DataType="viewModel:CrudMainViewModel"
              xmlns:models="clr-namespace:MauiCodeSnippets.Crud.Models"
              Title="CrudMainPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Family Tree"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label
+                Text="Family Tree"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
 
-        <Entry Placeholder="Enter Name"
-           Text="{Binding FamilyName, Mode=TwoWay}"
-            />
+            <Label 
+                FontSize="8"
+                Text="Multiple elements, using a Model" />
 
-        <Button Text="Update" Command="{Binding UpdateFamilyNameCommand}" />
+            <Entry Placeholder="Enter Name"
+                Text="{Binding FamilyName, Mode=TwoWay}" />
 
-        <Button Text="Get local filename" Command="{Binding GetLocalDbFileNameCommand}" />
+            <Button Text="Update" Command="{Binding UpdateFamilyNameCommand}" />
 
-        <Entry Placeholder="Enter Member Name"
-            Text="{Binding NewFamilyName, Mode=TwoWay}"
-                />
+            <Button Text="Get local filename" Command="{Binding GetLocalDbFileNameCommand}" />
 
-        <DatePicker 
+            <Entry Placeholder="Enter Member Name"
+            Text="{Binding NewFamilyName, Mode=TwoWay}" />
+
+            <DatePicker
             Date="{Binding DateOfBirth, Mode=TwoWay}"
-            VerticalOptions="Center" 
+            VerticalOptions="Center"
             HorizontalOptions="Center" />
 
-        <Button Text="Add Family Member" Command="{Binding AddFamilyMemberCommand}" />
+            <Button Text="Add Family Member" Command="{Binding AddFamilyMemberCommand}" />
 
-        <CollectionView ItemsSource="{Binding Members}" >
-
-            <!--Make the data template associate with type string / this would normally be a model -->
-            <CollectionView.ItemTemplate>
-                <DataTemplate 
+            <CollectionView ItemsSource="{Binding Members}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate
                     x:DataType="{x:Type models:PersonModel}">
-                    <Grid ColumnDefinitions="Auto,Auto">
-                        <Label Text="{Binding FirstName}" Grid.Column="0" />
-                        <Label Text="{Binding DateOfBirth}" Grid.Column="1" />
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </VerticalStackLayout>
+
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem 
+                                        Text="Delete" 
+                                        BackgroundColor="Red"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CrudMainViewModel}}, Path=RemoveFamilyMemberCommand}"
+                                        CommandParameter="{Binding .}"
+                                        />      
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <Grid ColumnDefinitions="200,150" Padding="0,5">
+                                <Frame Grid.Column="0">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CrudMainViewModel}}, Path=TapCommand}"
+                                    CommandParameter="{Binding .}">
+                                        </TapGestureRecognizer>
+                                    </Frame.GestureRecognizers>
+                                    <Label Text="{Binding FirstName}" FontSize="18" />
+                                </Frame>
+                                <Frame Grid.Column="1">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CrudMainViewModel}}, Path=TapCommand}"
+                                    CommandParameter="{Binding .}">
+                                        </TapGestureRecognizer>
+                                    </Frame.GestureRecognizers>
+                                    <Label Text="{Binding DateOfBirth, StringFormat='{0:dd/MM/yyyy}'}" FontSize="18" />
+                                </Frame>
+                            </Grid>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

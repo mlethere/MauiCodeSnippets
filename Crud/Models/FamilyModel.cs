@@ -94,6 +94,7 @@ public class CrudModel
     public void RemoveFamilyMember(string firstName)
     {
         Family.FamilyMembers.RemoveAll(x => x.FirstName == firstName);
+        SaveToLocalFile();
     }
 
     /// <summary>

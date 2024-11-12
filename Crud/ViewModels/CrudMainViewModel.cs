@@ -5,6 +5,8 @@ using System.Collections.ObjectModel;
 
 namespace MauiCodeSnippets.Crud.ViewModels;
 
+// TODO: Clean up the Main Page View
+
 public partial class CrudMainViewModel : ObservableObject
 {
     /// <summary>
@@ -64,14 +66,18 @@ public partial class CrudMainViewModel : ObservableObject
         await Shell.Current.DisplayAlert("Local Filename Location", FamilyModel.GetLocalFilename(), "Okay");
     }
 
+    /// <summary>
+    /// Remove item by Swiping and selecting delete in CollectionView
+    /// </summary>
+    /// <param name="familyMember"></param>
+    /// <returns></returns>
     [RelayCommand]
-    private async Task RemoveFamilyMember(string memberName)
+    async Task RemoveFamilyMember(PersonModel familyMember)
     {
-        // TODO: Change to be ID #
-        // TODO: Add a contains (like below) in Model and then refresh the whole list.
-        FamilyModel.RemoveFamilyMember(memberName);
-        FamilyModel.SaveToLocalFile();
-        // TODO: Refresh the list
+        await Shell.Current.DisplayAlert("Swipe & Delete", $"You swiped on the CollectionView Row that holds {familyMember.FirstName} born on {familyMember.DateOfBirth}", "Okay");
+
+        FamilyModel.RemoveFamilyMember(familyMember.FirstName);
+        Members = new ObservableCollection<PersonModel>(FamilyModel.Family.FamilyMembers);
     }
 
     /// <summary>
@@ -85,5 +91,11 @@ public partial class CrudMainViewModel : ObservableObject
         FamilyModel.SaveToLocalFile();
 
         await Shell.Current.DisplayAlert("Family Name Updated", "The family name has been updated", "Okay");
+    }
+
+    [RelayCommand]
+    async Task Tap(PersonModel familyMember)
+    {
+        await Shell.Current.DisplayAlert("Tap Frame", $"You tapped on the Frame Element that holds {familyMember.FirstName} born on {familyMember.DateOfBirth}", "Okay");
     }
 }
