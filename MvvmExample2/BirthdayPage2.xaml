@@ -48,7 +48,7 @@
                             <SwipeItems>
                                 <!--This doesn't appear to work on Windows Machine. The binding is somewhat complicated-->
                                 <!--The RelativeSource equates to move up in the hierachy (DOM?) until we find that ViewModel type -->
-                                <!-- The RemoveCommand is ao interesting  -->
+                                <!-- The RemoveCommand is also interesting  -->
                                 <SwipeItem 
                                     Text="Delete" 
                                     BackgroundColor="Red"

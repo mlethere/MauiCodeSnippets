@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCodeSnippets.Crud.Views.CrudMainPage"
+	xmlns:viewModel="clr-namespace:MauiCodeSnippets.Crud.ViewModels"
+             x:DataType="viewModel:CrudMainViewModel"
+	xmlns:models="clr-namespace:MauiCodeSnippets.Crud.Models"
+             Title="Family Tree Crud Page">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label
+                Text="Family Tree"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" 
+            />
+            <Grid
+                RowDefinitions="Auto, Auto, Auto, Auto, *" 
+                ColumnDefinitions="Auto, Auto, *">
+                <Label 
+                    Text="Surname:"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    />
+                <Entry Placeholder="Enter Name"
+                       Text="{Binding FamilyName, Mode=TwoWay}" 
+                       Grid.Row ="1"
+                       Grid.Column="0"
+                       />
+                <Button Text="Update Surname"
+                       Command="{Binding UpdateFamilyNameCommand}" 
+                       Grid.Row="1"
+                       Grid.Column="2"
+                        />
+                <Label
+                    Text="First Name"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    />
+                <Entry Placeholder="Enter First Name"
+                       Text="{Binding NewFamilyName, Mode=TwoWay}" 
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       />
+                <Label
+                        Text="Date of Birth"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        />
+                <DatePicker
+                       Date="{Binding DateOfBirth, Mode=TwoWay}"
+                    Grid.Row="3"
+                    Grid.Column="1"/>
+                <Button 
+                    Text="Add Family Member" 
+                    Command="{Binding AddFamilyMemberCommand}" 
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    />
+                <CollectionView ItemsSource="{Binding Members}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="{x:Type models:PersonModel}">
+                            <SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItems>
+                                        <SwipeItem 
+                                            Text="Delete" 
+                                            BackgroundColor="Red"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CrudMainViewModel}}, Path=RemoveFamilyMemberCommand}"
+                                            CommandParameter="{Binding .}"
+                            />
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+                                <Grid ColumnDefinitions="250,150" Padding="0,5">
+                                    <Frame Grid.Column="0">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer
+                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CrudMainViewModel}}, Path=TapCommand}"
+                        CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                        </Frame.GestureRecognizers>
+                                        <Label Text="{Binding FirstName}" FontSize="18" />
+                                    </Frame>
+                                    <Frame Grid.Column="1">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer
+                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:CrudMainViewModel}}, Path=TapCommand}"
+                        CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                        </Frame.GestureRecognizers>
+                                        <Label Text="{Binding DateOfBirth, StringFormat='{0:dd/MM/yyyy}'}" FontSize="18" />
+                                    </Frame>
+                                </Grid>
+                            </SwipeView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+            <Button Text="Get Local Filename of where the JSON File Is Stored" Command="{Binding GetLocalDbFileNameCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

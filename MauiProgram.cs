@@ -1,4 +1,6 @@
 ﻿using MauiCodeSnippets.ApiClientExample;
+using MauiCodeSnippets.Crud.ViewModels;
+using MauiCodeSnippets.Crud.Views;
 using MauiCodeSnippets.GlobalViewModelExample;
 using MauiCodeSnippets.InternetConnectivity;
 using MauiCodeSnippets.MvvmExample2;
@@ -43,6 +45,9 @@ namespace MauiCodeSnippets
             builder.Services.AddSingleton<IsConnectedPage>();
             builder.Services.AddSingleton<IsConnectedViewModel>();
             builder.Services.AddSingleton<IConnectivity>(Connectivity.Current);
+
+            builder.Services.AddTransient<CrudMainPage>();
+            builder.Services.AddTransient<CrudMainViewModel>();
 
             return builder.Build();
         }

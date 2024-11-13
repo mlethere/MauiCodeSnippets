@@ -1,0 +1,49 @@
+﻿Mark Letheren
+8th November 2024
+MVVM Setup
+
+Folders:
+- Models
+- ViewModels
+- Views
+
+Views:
+- Add page with Page suffix
+- In Maui Program, add service type
+- In AppShell.xaml, add Routing
+
+ViewModel:
+- Add ViewModel suffix
+- Update: public partial class GlobalViewModel : ObservableObject
+- In Maui program, add service type
+
+Update View:
+- Add: xmlns:viewModel="clr-namespace:MauiCodeSnippets.Crud.ViewModels"
+       x:DataType="viewModel:CrudMainViewModel"
+
+Update Binding in View:
+- Change constructor to: public CrudMainPage(CrudMainViewModel vm)
+- Set BindingContext to vm : BindingContext = vm;
+- This could be a global view model (see GlobalViewModel examples) as setup is sightly different
+
+Add click event to test page:
+-private async void OnCrudExampleClicked(object sender, EventArgs e)
+-{
+-    await Shell.Current.GoToAsync(nameof(CrudMainPage));
+-}
+
+Add a text field to the view:
+- In ViewModel:
+    [ObservableProperty]
+    private string familyName = string.Empty;
+
+- In View:
+    <Entry Text="{Binding FamilyName, Mode=TwoWay}" />
+
+Add a command but to the view:
+- In ViewModel:
+    [RelayCommand]
+    void UpdateFamilyName(string item)
+
+- In View:
+    <Button Text="Add" Command="{Binding UpdateFamilyNameCommand}" />
