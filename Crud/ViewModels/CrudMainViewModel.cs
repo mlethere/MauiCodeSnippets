@@ -5,8 +5,6 @@ using System.Collections.ObjectModel;
 
 namespace MauiCodeSnippets.Crud.ViewModels;
 
-// TODO: Clean up the Main Page View
-
 public partial class CrudMainViewModel : ObservableObject
 {
     /// <summary>
@@ -42,7 +40,7 @@ public partial class CrudMainViewModel : ObservableObject
         familyName = FamilyModel.Family.FamilyName;
 
         // load the family members
-        members = new ObservableCollection<PersonModel>(FamilyModel.Family.FamilyMembers);
+        members = new ObservableCollection<PersonModel>(FamilyModel.Family.FamilyMembers.OrderBy(m => m.DateOfBirth));
     }
 
     private CrudModel FamilyModel { get; set; } = new CrudModel();
@@ -53,7 +51,7 @@ public partial class CrudMainViewModel : ObservableObject
         if (!FamilyModel.AddFamilyMember(NewFamilyName, DateOfBirth))
             await Shell.Current.DisplayAlert("Family Member Add", "Unfortunately the family member was not added", "Okay");
 
-        Members = new ObservableCollection<PersonModel>(FamilyModel.Family.FamilyMembers);
+        Members = new ObservableCollection<PersonModel>(FamilyModel.Family.FamilyMembers.OrderBy(m => m.DateOfBirth));
     }
 
     /// <summary>
@@ -77,7 +75,7 @@ public partial class CrudMainViewModel : ObservableObject
         await Shell.Current.DisplayAlert("Swipe & Delete", $"You swiped on the CollectionView Row that holds {familyMember.FirstName} born on {familyMember.DateOfBirth}", "Okay");
 
         FamilyModel.RemoveFamilyMember(familyMember.FirstName);
-        Members = new ObservableCollection<PersonModel>(FamilyModel.Family.FamilyMembers);
+        Members = new ObservableCollection<PersonModel>(FamilyModel.Family.FamilyMembers.OrderBy(m => m.DateOfBirth));
     }
 
     /// <summary>
