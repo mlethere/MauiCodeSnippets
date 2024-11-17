@@ -7,11 +7,6 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
 
             <Label
                 Text="Hello, Mark!"
@@ -23,79 +18,98 @@
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
-            
-            <Button
-                 x:Name="btnCoolButton"
-                 Text="White Button with Rounded Corners"
-                 Clicked="OnCoolButton_Clicked"
-                 HorizontalOptions="Fill" />
 
-            <Button
-                x:Name="btnSimpleMvvm"
-                Text="Simple example of a View-ViewModel Binding with a Timer"
-                Clicked="OnSimpleMvvm_Clicked"
-                HorizontalOptions="Fill" />
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto, Auto" ColumnDefinitions="Auto, Auto" >
+                <Button
+                    x:Name="btnCoolButton"
+                    Text="White Button with Rounded Corners"
+                    Clicked="OnCoolButton_Clicked"
+                    Grid.Row="0" Grid.Column="0"
+                    HorizontalOptions="Fill" />
 
-            <Button
-                 x:Name="btnNavigationMenuButton"
-                 Text="Navigation Menu Emulated"
-                 Clicked="OnNavigationMenuClicked"
-                 HorizontalOptions="Fill" />
+                <Button
+                    x:Name="btnSimpleMvvm"
+                    Text="Simple example of a View-ViewModel Binding with a Timer"
+                    Clicked="OnSimpleMvvm_Clicked"
+                    Grid.Row="1" Grid.Column="0"
+                    HorizontalOptions="Fill" />
 
-            <Button
-                  x:Name="btnMvvmCommands"
-                  Text="View-ViewModel Binding to Commands Demonstration"
-                  Clicked="OnNumberPaidClicked"
-                  HorizontalOptions="Fill" />
+                <Button
+                    x:Name="btnNavigationMenuButton"
+                    Text="Navigation Menu Emulated"
+                    Clicked="OnNavigationMenuClicked"
+                    Grid.Row="2" Grid.Column="0"                    
+                    HorizontalOptions="Fill" />
 
-            <Button
-                x:Name="btnMvvmBirthdays"
-                Text="MVVM Edit Page With a Date Picker"
-                Clicked="OnBirthdaysClicked"
-                HorizontalOptions="Fill" />
+                <Button
+                     x:Name="btnMvvmCommands"
+                     Text="View-ViewModel Binding to Commands Demonstration"
+                     Clicked="OnNumberPaidClicked"
+                     Grid.Row="3" Grid.Column="0"
+                     HorizontalOptions="Fill" />
 
-            <Button
+                <Button
+                    x:Name="btnMvvmBirthdays"
+                    Text="MVVM Edit Page With a Date Picker"
+                    Clicked="OnBirthdaysClicked"
+                    Grid.Row="0" Grid.Column="1"
+                    HorizontalOptions="Fill" />
+
+                <Button
                 x:Name="btnIsConnectedToInternet"
                 Text="Check My Internet Connection"
                 Clicked="OnInternetConnectivity"
+                    Grid.Row="1" Grid.Column="1"
                 HorizontalOptions="Fill" />
-            <Button
+                <Button
                  x:Name="btnMvvmBirthdays2"
                  Text="MVVM version 2"
                  Clicked="OnBirthdays2Clicked"
                  HorizontalOptions="Fill" />
-            
-            <Button
+
+                <Button
                 x:Name="btnDateTimeExamplesButton"
                 Text="Date &amp; Time Picker Examples"
                 Clicked="OnDateTimeExamples"
+                    Grid.Row="2" Grid.Column="1"
                 HorizontalOptions="Fill" />
 
-            <Button
+                <Button
                 x:Name="btnApiClientExample"
                 Text="API REST Example"
                 Clicked="OnApiClientExampleClicked"
+                    Grid.Row="3" Grid.Column="1"
                 HorizontalOptions="Fill" />
 
-            <Button
+                <Button
                 x:Name="btnCrudExample"
                 Text="CRUD Example"
                 Clicked="OnCrudExampleClicked"
+                    Grid.Row="4" Grid.Column="1"
                 HorizontalOptions="Fill" />
 
-            <Button
+                <Button
                 x:Name="btnGlobalDataExampleClicked"
                 Text="App Wide Global ViewModel Sample Page 1"
                 Clicked="OnGlobalDataExampleClicked"
+                    Grid.Row="4" Grid.Column="0"
                 HorizontalOptions="Fill" />
 
-            <Button
+                <Button
                 x:Name="btnGlobalDataExampleClicked2"
                 Text="App Wide Global ViewModel Sample Page 2"
                 Clicked="OnGlobalDataExample2Clicked"
+                    Grid.Row="5" Grid.Column="0"
                 HorizontalOptions="Fill" />
 
+                <Button
+                 x:Name="btnRoutingWithParametersClicked"
+                 Text="Routing Page with Parameters"
+                 Clicked="OnRoutingWithParametersClicked"
+                    Grid.Row="5" Grid.Column="1"
+                 HorizontalOptions="Fill" />
 
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
 

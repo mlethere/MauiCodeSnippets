@@ -5,6 +5,7 @@ using MauiCodeSnippets.GlobalViewModelExample;
 using MauiCodeSnippets.InternetConnectivity;
 using MauiCodeSnippets.MvvmExample;
 using MauiCodeSnippets.MvvmExample2;
+using MauiCodeSnippets.RoutingWithParameters;
 using MauiCodeSnippets.Views;
 
 namespace MauiCodeSnippets
@@ -88,6 +89,11 @@ namespace MauiCodeSnippets
         private async void OnGlobalDataExample2Clicked(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync(nameof(GlobalViewModelPage2));
+        }
+
+        private async void OnRoutingWithParametersClicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(LandingPage));
         }
     }
 }

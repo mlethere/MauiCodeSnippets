@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCodeSnippets.RoutingWithParameters.LandingPage"
+             xmlns:viewModel="clr-namespace:MauiCodeSnippets.RoutingWithParameters"
+             x:DataType="viewModel:LandingViewModel"
+             Title="LandingPage">
+    
+    <VerticalStackLayout>
+        <Label 
+            Text="Objective here is to add two parameters to a model, and then pass that model to the Details Page"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry Text="{Binding SName, Mode=TwoWay}" />
+
+        <Entry Text="{Binding IInt, Mode=TwoWay}" />
+
+        <Button Text="Send to Details Page" Command="{Binding SendToDetailsPageCommand}" />
+
+    </VerticalStackLayout>
+</ContentPage>
