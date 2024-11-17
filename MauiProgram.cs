@@ -4,6 +4,7 @@ using MauiCodeSnippets.Crud.Views;
 using MauiCodeSnippets.GlobalViewModelExample;
 using MauiCodeSnippets.InternetConnectivity;
 using MauiCodeSnippets.MvvmExample2;
+using MauiCodeSnippets.RoutingWithParameters;
 using Microsoft.Extensions.Logging;
 
 namespace MauiCodeSnippets
@@ -48,6 +49,11 @@ namespace MauiCodeSnippets
 
             builder.Services.AddTransient<CrudMainPage>();
             builder.Services.AddTransient<CrudMainViewModel>();
+
+            builder.Services.AddSingleton<LandingPage>();
+            builder.Services.AddSingleton<LandingViewModel>();
+            builder.Services.AddSingleton<DetailsPage>();
+            builder.Services.AddSingleton<DetailsViewModel>();
 
             return builder.Build();
         }
