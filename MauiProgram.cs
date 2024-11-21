@@ -1,4 +1,5 @@
-﻿using MauiCodeSnippets.ApiClientExample;
+﻿using CommunityToolkit.Maui;
+using MauiCodeSnippets.ApiClientExample;
 using MauiCodeSnippets.Crud.ViewModels;
 using MauiCodeSnippets.Crud.Views;
 using MauiCodeSnippets.GlobalViewModelExample;
@@ -16,6 +17,7 @@ namespace MauiCodeSnippets
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -54,6 +56,10 @@ namespace MauiCodeSnippets
             builder.Services.AddSingleton<LandingViewModel>();
             builder.Services.AddSingleton<DetailsPage>();
             builder.Services.AddSingleton<DetailsViewModel>();
+
+            // https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/views/popup#building-a-popup
+            //builder.Services.AddSingleton<CustomSizeAndPositionPopupPage>();
+            //builder.Services.AddTransientPopup<UpdatingPopup, UpdatingPopupViewModel>();
 
             return builder.Build();
         }

@@ -19,7 +19,7 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
-            <Grid RowDefinitions="Auto,Auto,Auto,Auto, Auto" ColumnDefinitions="Auto, Auto" >
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto, Auto, Auto" ColumnDefinitions="Auto, Auto" >
                 <Button
                     x:Name="btnCoolButton"
                     Text="White Button with Rounded Corners"
@@ -61,10 +61,12 @@
                 Clicked="OnInternetConnectivity"
                     Grid.Row="1" Grid.Column="1"
                 HorizontalOptions="Fill" />
+                
                 <Button
                  x:Name="btnMvvmBirthdays2"
                  Text="MVVM version 2"
                  Clicked="OnBirthdays2Clicked"
+                   Grid.Row="2" Grid.Column="0"
                  HorizontalOptions="Fill" />
 
                 <Button
@@ -108,6 +110,14 @@
                  Clicked="OnRoutingWithParametersClicked"
                     Grid.Row="5" Grid.Column="1"
                  HorizontalOptions="Fill" />
+
+
+                <Button
+                     x:Name="btnPopup"
+                     Text="Popup"
+                     Clicked="OnPopupClicked"
+                        Grid.Row="6" Grid.Column="1"
+                     HorizontalOptions="Fill" />
 
             </Grid>
         </VerticalStackLayout>

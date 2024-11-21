@@ -1,10 +1,12 @@
-﻿using MauiCodeSnippets.ApiClientExample;
+﻿using CommunityToolkit.Maui.Views;
+using MauiCodeSnippets.ApiClientExample;
 using MauiCodeSnippets.Crud.Views;
 using MauiCodeSnippets.DateTimePickerExamples;
 using MauiCodeSnippets.GlobalViewModelExample;
 using MauiCodeSnippets.InternetConnectivity;
 using MauiCodeSnippets.MvvmExample;
 using MauiCodeSnippets.MvvmExample2;
+using MauiCodeSnippets.Popups;
 using MauiCodeSnippets.RoutingWithParameters;
 using MauiCodeSnippets.Views;
 
@@ -94,6 +96,13 @@ namespace MauiCodeSnippets
         private async void OnRoutingWithParametersClicked(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync(nameof(LandingPage));
+        }
+
+        private void OnPopupClicked(object sender, EventArgs e)
+        {
+            var popup = new SimplePopup();
+
+            this.ShowPopup(popup);
         }
     }
 }
