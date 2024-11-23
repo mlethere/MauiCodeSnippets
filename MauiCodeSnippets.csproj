@@ -83,6 +83,12 @@
 	  <MauiXaml Update="DateTimePickerExamples\DT_ExamplePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="GetValueFromChildPage\Views\ChildPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="GetValueFromChildPage\Views\ParentPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="GlobalViewModelExample\GlobalViewModelPage1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -129,6 +135,7 @@
 
 	<ItemGroup>
 	  <Folder Include="BaseClasses\" />
+	  <Folder Include="GetValueFromChildPage\ViewModels\" />
 	  <Folder Include="Models\" />
 	  <Folder Include="NavigationExamples\" />
 	</ItemGroup>

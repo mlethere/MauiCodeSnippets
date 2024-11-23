@@ -19,7 +19,7 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
-            <Grid RowDefinitions="Auto,Auto,Auto,Auto, Auto, Auto" ColumnDefinitions="Auto, Auto" >
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto, Auto, Auto, Auto" ColumnDefinitions="*, *" >
                 <Button
                     x:Name="btnCoolButton"
                     Text="White Button with Rounded Corners"
@@ -118,6 +118,14 @@
                      Clicked="OnPopupClicked"
                         Grid.Row="6" Grid.Column="1"
                      HorizontalOptions="Fill" />
+
+                <Button
+                    x:Name="btnGetValueFromChildPage"
+                    Text="Get a value from a child page"
+                    Clicked="OnGetValueFromChildPageClicked"
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    HorizontalOptions="Fill" />
 
             </Grid>
         </VerticalStackLayout>

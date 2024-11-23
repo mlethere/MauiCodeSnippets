@@ -2,6 +2,7 @@
 using MauiCodeSnippets.ApiClientExample;
 using MauiCodeSnippets.Crud.Views;
 using MauiCodeSnippets.DateTimePickerExamples;
+using MauiCodeSnippets.GetValueFromChildPage.Views;
 using MauiCodeSnippets.GlobalViewModelExample;
 using MauiCodeSnippets.InternetConnectivity;
 using MauiCodeSnippets.MvvmExample;
@@ -103,6 +104,11 @@ namespace MauiCodeSnippets
             var popup = new SimplePopup();
 
             this.ShowPopup(popup);
+        }
+
+        private void OnGetValueFromChildPageClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ParentPage());
         }
     }
 }
