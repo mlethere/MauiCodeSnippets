@@ -4,7 +4,6 @@ using MauiCodeSnippets.DateTimePickerExamples;
 using MauiCodeSnippets.GlobalViewModelExample;
 using MauiCodeSnippets.InternetConnectivity;
 using MauiCodeSnippets.MvvmExample2;
-using MauiCodeSnippets.Popups;
 using MauiCodeSnippets.RoutingWithParameters;
 
 namespace MauiCodeSnippets
@@ -24,6 +23,7 @@ namespace MauiCodeSnippets
             Routing.RegisterRoute(nameof(CrudMainPage), typeof(CrudMainPage));
             Routing.RegisterRoute(nameof(LandingPage), typeof(LandingPage));
             Routing.RegisterRoute(nameof(DetailsPage), typeof(DetailsPage));
+            Routing.RegisterRoute(nameof(GetValueFromChildPage.Views.ParentPage), typeof(GetValueFromChildPage.Views.ParentPage));
         }
     }
 }

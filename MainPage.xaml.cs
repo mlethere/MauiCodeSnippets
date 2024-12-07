@@ -106,9 +106,9 @@ namespace MauiCodeSnippets
             this.ShowPopup(popup);
         }
 
-        private void OnGetValueFromChildPageClicked(object sender, EventArgs e)
+        private async void OnGetValueFromChildPageClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ParentPage());
+            await Shell.Current.GoToAsync(nameof(GetValueFromChildPage.Views.ParentPage));
         }
     }
 }
