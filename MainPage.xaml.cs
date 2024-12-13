@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Maui.Views;
 using MauiCodeSnippets.ApiClientExample;
+using MauiCodeSnippets.Charts.DevExpressSample;
 using MauiCodeSnippets.Crud.Views;
 using MauiCodeSnippets.DateTimePickerExamples;
 using MauiCodeSnippets.GetValueFromChildPage.Views;
@@ -109,6 +110,11 @@ namespace MauiCodeSnippets
         private async void OnGetValueFromChildPageClicked(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync(nameof(GetValueFromChildPage.Views.ParentPage));
+        }
+
+        private void btnSampleGraph_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CartesianGraph());
         }
     }
 }

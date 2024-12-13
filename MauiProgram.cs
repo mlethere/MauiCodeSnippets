@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui;
+using DevExpress.Maui;
 using MauiCodeSnippets.ApiClientExample;
 using MauiCodeSnippets.Crud.ViewModels;
 using MauiCodeSnippets.Crud.Views;
@@ -18,6 +19,8 @@ namespace MauiCodeSnippets
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
+                .UseDevExpress()
+                .UseDevExpressCharts()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
