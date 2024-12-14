@@ -3,11 +3,11 @@ using MauiCodeSnippets.ApiClientExample;
 using MauiCodeSnippets.Charts.DevExpressSample;
 using MauiCodeSnippets.Crud.Views;
 using MauiCodeSnippets.DateTimePickerExamples;
-using MauiCodeSnippets.GetValueFromChildPage.Views;
 using MauiCodeSnippets.GlobalViewModelExample;
 using MauiCodeSnippets.InternetConnectivity;
 using MauiCodeSnippets.MvvmExample;
 using MauiCodeSnippets.MvvmExample2;
+using MauiCodeSnippets.NumberSpinner;
 using MauiCodeSnippets.Popups;
 using MauiCodeSnippets.RoutingWithParameters;
 using MauiCodeSnippets.Views;
@@ -115,6 +115,11 @@ namespace MauiCodeSnippets
         private void btnSampleGraph_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new CartesianGraph());
+        }
+
+        private void btnNumberSpinner_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NumberSpinnerPage());
         }
     }
 }

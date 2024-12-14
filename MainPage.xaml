@@ -135,6 +135,14 @@
                     Grid.Row="7"
                     HorizontalOptions="Fill" />
 
+                <Button
+                    x:Name="btnNumberSpinner"
+                    Text="Number Spinner"
+                    Clicked="btnNumberSpinner_Clicked"
+                    Grid.Column="1"
+                    Grid.Row="7"
+                    HorizontalOptions="Fill" />
+
             </Grid>
         </VerticalStackLayout>
     </ScrollView>

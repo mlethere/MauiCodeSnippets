@@ -111,6 +111,9 @@
 	  <MauiXaml Update="MvvmExample2\DetailPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="NumberSpinner\NumberSpinnerPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Popups\SimplePopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
