@@ -19,7 +19,7 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
-            <Grid RowDefinitions="Auto,Auto,Auto,Auto, Auto, Auto, Auto" ColumnDefinitions="*, *" >
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto, Auto, Auto, Auto, Auto" Padding="5,5" ColumnDefinitions="*, *" >
                 <Button
                     x:Name="btnCoolButton"
                     Text="White Button with Rounded Corners"
@@ -125,6 +125,22 @@
                     Clicked="OnGetValueFromChildPageClicked"
                     Grid.Row="6"
                     Grid.Column="0"
+                    HorizontalOptions="Fill" />
+
+                <Button
+                    x:Name="btnSampleGraph"
+                    Text="Sample Graph (Emulator Only)"
+                    Clicked="btnSampleGraph_Clicked"
+                    Grid.Column="0"
+                    Grid.Row="7"
+                    HorizontalOptions="Fill" />
+
+                <Button
+                    x:Name="btnNumberSpinner"
+                    Text="Number Spinner"
+                    Clicked="btnNumberSpinner_Clicked"
+                    Grid.Column="1"
+                    Grid.Row="7"
                     HorizontalOptions="Fill" />
 
             </Grid>

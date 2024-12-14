@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCodeSnippets.Charts.DevExpressSample.CartesianGraph"
+             xmlns:dx="http://schemas.devexpress.com/maui"
+             xmlns:local="clr-namespace:MauiCodeSnippets.Charts.DevExpressSample"
+             Title="CartesianGraph">
+
+    <ContentPage.BindingContext>
+        <local:CartesianGraphViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <dx:SeriesCrosshairOptions x:Key="lineSeriesHintOptions"
+                               PointTextPattern="{}{S}: {V}M"
+                               ShowInLabel="True"
+                               AxisLabelVisible="True"
+                               AxisLineVisible="True"/>
+    </ContentPage.Resources>
+
+    <dx:ChartView>
+        <dx:ChartView.Series>
+            
+            <dx:LineSeries DisplayName="{Binding GdpValueForUSA.CountryName}">
+                <dx:LineSeries.Data>
+                    <dx:SeriesDataAdapter DataSource="{Binding GdpValueForUSA.Values}"
+                                          ArgumentDataMember="Year">
+                        <dx:ValueDataMember Type="Value" Member="Value"/>
+                    </dx:SeriesDataAdapter>
+                </dx:LineSeries.Data>
+            </dx:LineSeries>
+
+            <dx:LineSeries DisplayName="{Binding GdpValueForChina.CountryName}">
+                <dx:LineSeries.Data>
+                    <dx:SeriesDataAdapter DataSource="{Binding GdpValueForChina.Values}"
+                                          ArgumentDataMember="Year">
+                        <dx:ValueDataMember Type="Value" Member="Value"/>
+                    </dx:SeriesDataAdapter>
+                </dx:LineSeries.Data>
+            </dx:LineSeries>
+
+            <dx:LineSeries DisplayName="{Binding GdpValueForJapan.CountryName}">
+                <dx:LineSeries.Data>
+                    <dx:SeriesDataAdapter DataSource="{Binding GdpValueForJapan.Values}"
+                                          ArgumentDataMember="Year">
+                        <dx:ValueDataMember Type="Value" Member="Value"/>
+                    </dx:SeriesDataAdapter>
+                </dx:LineSeries.Data>
+            </dx:LineSeries>
+        </dx:ChartView.Series>
+        <dx:ChartView.AxisX>
+            <dx:DateTimeAxisX MeasureUnit="Year" 
+                          GridAlignment="Year" 
+                          GridSpacing="2"/>
+        </dx:ChartView.AxisX>
+        <dx:ChartView.AxisY>
+            <dx:NumericAxisY>
+                <dx:NumericAxisY.Title>
+                    <dx:AxisTitle Text="Trillions of US$">
+                        <dx:AxisTitle.Style>
+                            <dx:TitleStyle>
+                                <dx:TitleStyle.TextStyle>
+                                    <dx:TextStyle Size="16"/>
+                                </dx:TitleStyle.TextStyle>
+                            </dx:TitleStyle>
+                        </dx:AxisTitle.Style>
+                    </dx:AxisTitle>
+                </dx:NumericAxisY.Title>
+                <dx:NumericAxisY.Label>
+                    <dx:AxisLabel TextFormat="#.#" Position="Inside"/>
+                </dx:NumericAxisY.Label>
+            </dx:NumericAxisY>
+        </dx:ChartView.AxisY>
+        <dx:ChartView.Legend>
+            <dx:Legend VerticalPosition="TopOutside" 
+                   HorizontalPosition="Center" 
+                   Orientation="LeftToRight"/>
+        </dx:ChartView.Legend>
+        
+        
+        
+    </dx:ChartView>
+    
+</ContentPage>
